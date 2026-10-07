@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Book a trusted professional on SkillConnect."
+    >
+
+    <title>Book Service | SkillConnect</title>
+
+    <!-- Booking CSS -->
+    <link rel="stylesheet" href="booking.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="container header-container">
+
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+                    S
+                </span>
+
+                <span class="logo-text">
+                    Skill<span>Connect</span>
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="main-nav">
+
+                <a href="coustomer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+                <a href="post-job.html">
+                    Post a Job
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+
+            <div class="header-actions">
+
+                <a
+                    href="notifications.html"
+                    class="notification-btn"
+                    title="Notifications"
+                >
+                    🔔
+
+                    <span class="notification-count">
+                        2
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="coustomer-profile.html"
+                    class="profile-btn"
+                >
+
+                    <span class="profile-avatar">
+                        C
+                    </span>
+
+                    <span class="profile-name">
+                        Customer
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="booking-page">
+
+        <div class="container">
+
+
+            <!-- Breadcrumb -->
+
+            <div class="breadcrumb">
+
+                <a href="coustomer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <span>›</span>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <span>›</span>
+
+                <span>
+                    Book Service
+                </span>
+
+            </div>
+
+
+
+            <!-- Page Header -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        BOOK A SERVICE
+                    </span>
+
+                    <h1>
+                        Book Your Professional
+                    </h1>
+
+                    <p>
+                        Enter your requirements and schedule your service.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BOOKING FORM
+            ================================================== -->
+
+            <form
+                id="bookingForm"
+                class="booking-form"
+            >
+
+
+                <!-- =============================================
+                     LEFT SIDE
+                ============================================== -->
+
+                <div class="booking-left-column">
+
+
+                    <!-- SERVICE INFORMATION -->
+
+                    <section class="details-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    STEP 1
+                                </span>
+
+                                <h2>
+                                    Service Information
+                                </h2>
+
+                            </div>
+
+                            <div class="service-icon">
+                                🧹
+                            </div>
+
+                        </div>
+
+
+                        <!-- Service -->
+
+                        <div class="form-group">
+
+                            <label for="service">
+
+                                Select Service
+
+                                <span>*</span>
+
+                            </label>
+
+
+                            <select
+                                id="service"
+                                name="service"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option value="home-cleaning">
+                                    Home Cleaning
+                                </option>
+
+                                <option
+                                    value="bathroom-cleaning"
+                                    selected
+                                >
+                                    Bathroom Cleaning
+                                </option>
+
+                                <option value="plumbing">
+                                    Plumbing
+                                </option>
+
+                                <option value="electrician">
+                                    Electrician
+                                </option>
+
+                                <option value="ac-repair">
+                                    AC Repair
+                                </option>
+
+                                <option value="carpenter">
+                                    Carpenter
+                                </option>
+
+                                <option value="painting">
+                                    Painting
+                                </option>
+
+                                <option value="appliance-repair">
+                                    Appliance Repair
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Professional -->
+
+                        <div class="form-group">
+
+                            <label for="professional">
+
+                                Select Professional
+
+                                <span>*</span>
+
+                            </label>
+
+
+                            <select
+                                id="professional"
+                                name="professional"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a professional
+                                </option>
+
+                                <option value="rahul-kumar" selected>
+                                    Rahul Kumar — ⭐ 4.8
+                                </option>
+
+                                <option value="amit-sharma">
+                                    Amit Sharma — ⭐ 4.7
+                                </option>
+
+                                <option value="rohit-verma">
+                                    Rohit Verma — ⭐ 4.6
+                                </option>
+
+                            </select>
+
+
+                            <small class="input-help">
+                                You can select a professional based on
+                                rating, experience and price.
+                            </small>
+
+                        </div>
+
+
+                        <!-- Service Details -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="serviceDate">
+
+                                    Service Date
+
+                                    <span>*</span>
+
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="serviceDate"
+                                    name="serviceDate"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="serviceTime">
+
+                                    Preferred Time
+
+                                    <span>*</span>
+
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="serviceTime"
+                                    name="serviceTime"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Duration -->
+
+                        <div class="form-group">
+
+                            <label for="duration">
+
+                                Estimated Duration
+
+                            </label>
+
+
+                            <select
+                                id="duration"
+                                name="duration"
+                            >
+
+                                <option value="1">
+                                    1 Hour
+                                </option>
+
+                                <option value="2" selected>
+                                    2 Hours
+                                </option>
+
+                                <option value="3">
+                                    3 Hours
+                                </option>
+
+                                <option value="4">
+                                    4 Hours
+                                </option>
+
+                                <option value="5">
+                                    5+ Hours
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =========================================
+                         LOCATION
+                    ========================================== -->
+
+                    <section class="details-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    STEP 2
+                                </span>
+
+                                <h2>
+                                    Service Location
+                                </h2>
+
+                            </div>
+
+                            <div class="location-icon">
+                                📍
+                            </div>
+
+                        </div>
+
+
+                        <!-- Address -->
+
+                        <div class="form-group">
+
+                            <label for="address">
+
+                                Complete Address
+
+                                <span>*</span>
+
+                            </label>
+
+
+                            <textarea
+                                id="address"
+                                name="address"
+                                rows="3"
+                                placeholder="Enter your complete address..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- City / Pincode -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="city">
+
+                                    City
+
+                                    <span>*</span>
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    placeholder="e.g. Kanpur"
+                                    value="Kanpur"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="pincode">
+
+                                    Pincode
+
+                                    <span>*</span>
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="pincode"
+                                    name="pincode"
+                                    placeholder="e.g. 208001"
+                                    maxlength="6"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Landmark -->
+
+                        <div class="form-group">
+
+                            <label for="landmark">
+
+                                Landmark
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="landmark"
+                                name="landmark"
+                                placeholder="Nearby landmark"
+                            >
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =========================================
+                         SPECIAL INSTRUCTIONS
+                    ========================================== -->
+
+                    <section class="details-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    STEP 3
+                                </span>
+
+                                <h2>
+                                    Additional Information
+                                </h2>
+
+                            </div>
+
+                            <div>
+                                📝
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="notes">
+
+                                Special Instructions
+
+                            </label>
+
+
+                            <textarea
+                                id="notes"
+                                name="notes"
+                                rows="5"
+                                placeholder="Tell the professional anything they should know before arriving..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Contact Preference -->
+
+                        <div class="form-group">
+
+                            <label>
+
+                                Contact Preference
+
+                            </label>
+
+
+                            <div class="radio-options">
+
+                                <label class="radio-option">
+
+                                    <input
+                                        type="radio"
+                                        name="contactPreference"
+                                        value="call"
+                                        checked
+                                    >
+
+                                    <span>
+                                        📞 Call
+                                    </span>
+
+                                </label>
+
+
+                                <label class="radio-option">
+
+                                    <input
+                                        type="radio"
+                                        name="contactPreference"
+                                        value="message"
+                                    >
+
+                                    <span>
+                                        💬 Message
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =========================================
+                         TERMS
+                    ========================================== -->
+
+                    <section class="details-card terms-card">
+
+                        <label class="checkbox-option">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                            >
+
+                            <span>
+
+                                I agree to the
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                                and
+                                <a href="#">
+                                    Booking Policy
+                                </a>.
+
+                            </span>
+
+                        </label>
+
+                    </section>
+
+
+                </div>
+
+
+
+                <!-- =============================================
+                     RIGHT SIDE
+                ============================================== -->
+
+                <aside class="booking-right-column">
+
+
+                    <!-- BOOKING SUMMARY -->
+
+                    <section class="details-card price-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    BOOKING SUMMARY
+                                </span>
+
+                                <h2>
+                                    Your Booking
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Selected Service -->
+
+                        <div class="summary-service">
+
+                            <div class="summary-service-icon">
+                                🧹
+                            </div>
+
+                            <div>
+
+                                <h3 id="summaryService">
+                                    Bathroom Cleaning
+                                </h3>
+
+                                <p>
+                                    Professional Home Service
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Summary Details -->
+
+                        <div class="booking-info-list">
+
+
+                            <div class="info-item">
+
+                                <span>
+                                    Professional
+                                </span>
+
+                                <strong id="summaryProfessional">
+                                    Rahul Kumar
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info-item">
+
+                                <span>
+                                    Date
+                                </span>
+
+                                <strong id="summaryDate">
+                                    Select Date
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info-item">
+
+                                <span>
+                                    Time
+                                </span>
+
+                                <strong id="summaryTime">
+                                    Select Time
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info-item">
+
+                                <span>
+                                    Duration
+                                </span>
+
+                                <strong id="summaryDuration">
+                                    2 Hours
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Price -->
+
+                        <div class="price-details">
+
+                            <div class="price-row">
+
+                                <span>
+                                    Service Charge
+                                </span>
+
+                                <strong id="servicePrice">
+                                    ₹350
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-row">
+
+                                <span>
+                                    Platform Fee
+                                </span>
+
+                                <strong>
+                                    ₹30
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-row">
+
+                                <span>
+                                    Taxes
+                                </span>
+
+                                <strong>
+                                    ₹20
+                                </strong>
+
+                            </div>
+
+
+                            <div class="price-divider"></div>
+
+
+                            <div class="price-row total-price">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong id="totalPrice">
+                                    ₹400
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Payment -->
+
+                        <div class="payment-status">
+
+                            <span class="payment-dot"></span>
+
+                            Payment will be collected after booking
+
+                        </div>
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            class="primary-btn full-width"
+                            id="confirmBookingBtn"
+                        >
+
+                            Confirm Booking
+
+                        </button>
+
+
+                        <p class="secure-text">
+                            🔒 Your booking information is secure.
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- PROFESSIONAL PREVIEW -->
+
+                    <section class="details-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    PROFESSIONAL
+                                </span>
+
+                                <h2>
+                                    Rahul Kumar
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="professional-info">
+
+                            <div class="professional-avatar">
+                                RK
+                            </div>
+
+
+                            <div class="professional-main-info">
+
+                                <h3>
+                                    Rahul Kumar
+                                </h3>
+
+                                <p>
+                                    Home Cleaning Professional
+                                </p>
+
+                                <div class="professional-rating">
+
+                                    <span>
+                                        ★★★★★
+                                    </span>
+
+                                    <strong>
+                                        4.8
+                                    </strong>
+
+                                    <small>
+                                        (126 Reviews)
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="professional-contact">
+
+                            <div class="contact-item">
+
+                                <span>
+                                    💼
+                                </span>
+
+                                <div>
+
+                                    <small>
+                                        Experience
+                                    </small>
+
+                                    <strong>
+                                        4+ Years
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="contact-item">
+
+                                <span>
+                                    📍
+                                </span>
+
+                                <div>
+
+                                    <small>
+                                        Location
+                                    </small>
+
+                                    <strong>
+                                        Kanpur
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="worker-profile.html"
+                            class="view-profile-btn"
+                            style="display:block;text-align:center;margin-top:18px;"
+                        >
+                            View Full Profile
+                        </a>
+
+                    </section>
+
+
+
+                    <!-- HELP -->
+
+                    <section class="help-card">
+
+                        <div class="help-icon">
+                            ?
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Need Help?
+                            </h3>
+
+                            <p>
+                                Contact SkillConnect support if you
+                                have any questions about your booking.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="help-btn"
+                                onclick="contactSupport()"
+                            >
+                                Contact Support
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                </aside>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="main-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-icon">
+                            S
+                        </span>
+
+                        <span class="logo-text">
+                            Skill<span>Connect</span>
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        Connect with trusted professionals for
+                        your everyday service needs.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="services.html">
+                        Services
+                    </a>
+
+                    <a href="my-bookings.html">
+                        My Bookings
+                    </a>
+
+                    <a href="post-job.html">
+                        Post a Job
+                    </a>
+
+                </div>
+
+
+                <!-- Support -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Support
+                    </h3>
+
+                    <a href="notifications.html">
+                        Notifications
+                    </a>
+
+                    <a href="#">
+                        Help Center
+                    </a>
+
+                    <a href="#">
+                        Contact Us
+                    </a>
+
+                </div>
+
+
+                <!-- Account -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Account
+                    </h3>
+
+                    <a href="customer-profile.html">
+                        My Profile
+                    </a>
+
+                    <a href="login.html">
+                        Logout
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 SkillConnect. All rights reserved.
+                </p>
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         BOOKING JAVASCRIPT
+    ====================================================== -->
+
+    <script src="booking.js"></script>
+
+
+</body>
+
+</html>

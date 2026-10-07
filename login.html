@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Login to SkillConnect - Find and book trusted professionals">
+
+    <title>Login | SkillConnect</title>
+
+
+    <!-- =====================================================
+         AUTHENTICATION CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="login.css">
+
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- =====================================================
+         MAIN AUTH CONTAINER
+         ===================================================== -->
+
+    <div class="auth-container">
+
+
+        <!-- =================================================
+             LEFT BRAND PANEL
+             ================================================= -->
+
+        <section class="auth-brand-panel">
+
+
+            <!-- Logo -->
+
+            <a href="index.html"
+               class="auth-logo">
+
+                <span class="auth-logo-icon">
+                    SC
+                </span>
+
+                <span class="auth-logo-text">
+                    Skill<span>Connect</span>
+                </span>
+
+            </a>
+
+
+            <!-- Brand Content -->
+
+            <div class="auth-brand-content">
+
+                <span class="auth-brand-badge">
+                    ✦ Smart Service Platform
+                </span>
+
+
+                <h1>
+                    Connect with
+                    <span>Trusted Professionals</span>
+                    Near You.
+                </h1>
+
+
+                <p>
+                    Book skilled professionals for your everyday
+                    services with ease, safety and transparency.
+                </p>
+
+
+                <!-- Features -->
+
+                <div class="auth-features">
+
+
+                    <div class="auth-feature">
+
+                        <div class="auth-feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Verified Professionals
+                            </h3>
+
+                            <p>
+                                Connect with skilled and verified
+                                service providers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <div class="auth-feature-icon">
+                            ★
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Ratings & Reviews
+                            </h3>
+
+                            <p>
+                                Check ratings and reviews before
+                                booking a professional.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <div class="auth-feature-icon">
+                            ₹
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Transparent Pricing
+                            </h3>
+
+                            <p>
+                                Compare prices and choose the
+                                service that fits your budget.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Brand Footer -->
+
+            <div class="auth-brand-footer">
+
+                <span>
+                    © 2026 SkillConnect
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    Trusted Local Services
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             RIGHT LOGIN PANEL
+             ================================================= -->
+
+        <section class="auth-form-panel">
+
+
+            <div class="auth-form-container">
+
+
+                <!-- Mobile Logo -->
+
+                <a href="index.html"
+                   class="auth-mobile-logo">
+
+                    <span class="auth-logo-icon">
+                        SC
+                    </span>
+
+                    <span class="auth-logo-text">
+                        Skill<span>Connect</span>
+                    </span>
+
+                </a>
+
+
+                <!-- Form Header -->
+
+                <div class="auth-form-header">
+
+                    <span class="auth-small-label">
+                        WELCOME BACK
+                    </span>
+
+                    <h2>
+                        Sign in to your account
+                    </h2>
+
+                    <p>
+                        Enter your details to continue to SkillConnect.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     LOGIN FORM
+                     ================================================= -->
+
+                <form id="loginForm"
+                      class="auth-form"
+                      novalidate>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ✉
+                            </span>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <div class="form-label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <a href="#"
+                               id="forgotPasswordLink"
+                               class="forgot-password">
+
+                                Forgot Password?
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="loginPassword"
+                                aria-label="Show password">
+
+                                👁
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Remember Me -->
+
+                    <div class="form-options">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                                name="rememberMe"
+                            >
+
+                            <span class="custom-checkbox"></span>
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Auth Message -->
+
+                    <div id="authMessage"
+                         class="auth-message"
+                         role="alert"
+                         aria-live="polite">
+                    </div>
+
+
+                    <!-- Login Button -->
+
+                    <button
+                        type="submit"
+                        id="loginBtn"
+                        class="auth-submit-btn">
+
+                        <span class="btn-text">
+                            Sign In
+                        </span>
+
+                        <span class="btn-loader"
+                              aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- =================================================
+                     DIVIDER
+                     ================================================= -->
+
+                <div class="auth-divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+
+                <!-- Google Login Placeholder -->
+
+                <button
+                    type="button"
+                    class="social-login-btn"
+                    id="googleLoginBtn">
+
+                    <span class="social-icon">
+                        G
+                    </span>
+
+                    <span>
+                        Continue with Google
+                    </span>
+
+                </button>
+
+
+                <!-- Register -->
+
+                <div class="auth-switch">
+
+                    <span>
+                        Don't have an account?
+                    </span>
+
+                    <a href="register.html">
+                        Create Account
+                    </a>
+
+                </div>
+
+
+                <!-- Back to Home -->
+
+                <a href="index.html"
+                   class="back-home">
+
+                    ← Back to Homepage
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         FIREBASE AUTHENTICATION JAVASCRIPT
+         ===================================================== -->
+
+    <script type="module"
+            src="login.js"></script>
+
+
+</body>
+
+</html>

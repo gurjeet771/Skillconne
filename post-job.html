@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Post a Job - Find the right professional for your requirement">
+
+    <title>Post a Job | SkillConnect</title>
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="post-job.css">
+
+    <!-- Responsive CSS -->
+
+    <link rel="stylesheet" href="responsive.css">
+
+
+    <!-- =====================================================
+         POST JOB PAGE CSS
+         ===================================================== -->
+
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- =====================================================
+         DASHBOARD LAYOUT
+         ===================================================== -->
+
+    <div class="dashboard-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="dashboard-sidebar"
+               id="dashboardSidebar">
+
+
+            <!-- Brand -->
+
+            <div class="sidebar-brand">
+
+                <a href="index.html">
+
+                    <div class="sidebar-logo">
+                        SC
+                    </div>
+
+                    <div class="sidebar-brand-name">
+                        Skill<span>Connect</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Customer Profile -->
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar"
+                     id="sidebarCustomerAvatar">
+                    RK
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <h4 id="sidebarCustomerName">
+                        Rahul Kumar
+                    </h4>
+
+                    <p>
+                        Customer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="sidebar-nav-title">
+                    Main Menu
+                </p>
+
+
+                <ul>
+
+
+                    <!-- Dashboard -->
+
+                    <li>
+
+                        <a href="coustomer-dashboard.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ⌂
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Dashboard
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Services -->
+
+                    <li>
+
+                        <a href="services.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▦
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Services
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- My Bookings -->
+
+                    <li>
+
+                        <a href="my-bookings.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▣
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Bookings
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Post Job -->
+
+                    <li>
+
+                        <a href="post-job.html"
+                           class="sidebar-nav-link active">
+
+                            <span class="sidebar-nav-icon">
+                                ＋
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Post a Job
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Notifications -->
+
+                    <li>
+
+                        <a href="notifications.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ♢
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Notifications
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <p class="sidebar-nav-title"
+                   style="margin-top: 25px;">
+
+                    Account
+
+                </p>
+
+
+                <ul>
+
+
+                    <!-- Profile -->
+
+                    <li>
+
+                        <a href="coustomer-profile.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ◉
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Profile
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Payments -->
+
+                    <li>
+
+                        <a href="payments.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ₹
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Payments
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-logout"
+                        id="logoutBtn">
+
+                    <span>
+                        ⇥
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================================
+                 HEADER
+                 ================================================= -->
+
+            <header class="dashboard-header">
+
+
+                <div class="dashboard-header-left">
+
+
+                    <button class="mobile-menu-btn"
+                            id="mobileMenuBtn">
+
+                        ☰
+
+                    </button>
+
+
+                    <div class="dashboard-header-title">
+
+                        <h2>
+                            Post a Job
+                        </h2>
+
+                        <p>
+                            Tell professionals what you need
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-header-right">
+
+
+                    <button class="header-icon-btn"
+                            onclick="window.location.href='notifications.html'">
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <div class="header-user">
+
+                        <div class="header-avatar"
+                             id="headerAvatar">
+                            RK
+                        </div>
+
+                        <div class="header-user-info">
+
+                            <strong id="headerName">
+                                Rahul Kumar
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 CONTENT
+                 ================================================= -->
+
+            <div class="dashboard-content">
+
+
+                <div class="post-job-page">
+
+
+                    <!-- Page Header -->
+
+                    <div class="post-job-page-header">
+
+                        <h1>
+                            Post a Job
+                        </h1>
+
+                        <p>
+                            Can't find exactly what you're looking for?
+                            Post your requirement and let skilled
+                            professionals send you offers.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Success Message -->
+
+                    <div class="post-job-success"
+                         id="postJobSuccess">
+
+
+                        <div class="post-job-success-icon">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Job Posted Successfully!
+                            </h3>
+
+                            <p id="postJobSuccessText">
+                                Your job has been posted. Professionals
+                                near you can now send their offers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Error Message -->
+
+                    <div class="post-job-error"
+                         id="postJobError">
+                    </div>
+
+
+                    <!-- =================================================
+                         LAYOUT
+                         ================================================= -->
+
+                    <div class="post-job-layout">
+
+
+                        <!-- =================================================
+                             LEFT - FORM
+                             ================================================= -->
+
+                        <div class="post-job-card">
+
+
+                            <div class="post-job-card-header">
+
+                                <h2>
+                                    Job Requirement
+                                </h2>
+
+                                <p>
+                                    Provide accurate details to receive
+                                    better offers from professionals.
+                                </p>
+
+                            </div>
+
+
+                            <div class="post-job-card-body">
+
+
+                                <form id="postJobForm"
+                                      class="post-job-form"
+                                      novalidate>
+
+
+                                    <!-- =================================================
+                                         BASIC DETAILS
+                                         ================================================= -->
+
+                                    <div>
+
+
+                                        <h3 class="form-section-title">
+                                            Basic Details
+                                        </h3>
+
+
+                                        <div class="post-form-row">
+
+
+                                            <!-- Service Category -->
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobCategory">
+
+                                                    Service Category
+                                                    <span class="required">*</span>
+
+                                                </label>
+
+
+                                                <select
+                                                    id="jobCategory"
+                                                    name="category"
+                                                    required
+                                                >
+
+                                                    <option value="">
+                                                        Select a category
+                                                    </option>
+
+                                                    <option value="cleaning">
+                                                        Home Cleaning
+                                                    </option>
+
+                                                    <option value="plumbing">
+                                                        Plumbing
+                                                    </option>
+
+                                                    <option value="electrician">
+                                                        Electrician
+                                                    </option>
+
+                                                    <option value="ac-service">
+                                                        AC Service
+                                                    </option>
+
+                                                    <option value="carpenter">
+                                                        Carpenter
+                                                    </option>
+
+                                                    <option value="painting">
+                                                        Painting
+                                                    </option>
+
+                                                    <option value="appliance">
+                                                        Appliance Repair
+                                                    </option>
+
+                                                    <option value="beauty">
+                                                        Beauty & Salon
+                                                    </option>
+
+                                                    <option value="moving">
+                                                        Packers & Movers
+                                                    </option>
+
+                                                    <option value="pest-control">
+                                                        Pest Control
+                                                    </option>
+
+                                                    <option value="other">
+                                                        Other
+                                                    </option>
+
+                                                </select>
+
+                                            </div>
+
+
+                                            <!-- Job Title -->
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobTitle">
+
+                                                    Job Title
+                                                    <span class="required">*</span>
+
+                                                </label>
+
+
+                                                <input
+                                                    type="text"
+                                                    id="jobTitle"
+                                                    name="title"
+                                                    placeholder="e.g. Bathroom Cleaning"
+                                                    maxlength="100"
+                                                    required
+                                                >
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- =================================================
+                                         DESCRIPTION
+                                         ================================================= -->
+
+                                    <div>
+
+                                        <h3 class="form-section-title">
+
+                                            Describe Your Requirement
+
+                                            <span>
+                                                Be as specific as possible
+                                            </span>
+
+                                        </h3>
+
+
+                                        <div class="post-form-group">
+
+                                            <label for="jobDescription">
+
+                                                Description
+                                                <span class="required">*</span>
+
+                                            </label>
+
+
+                                            <textarea
+                                                id="jobDescription"
+                                                name="description"
+                                                placeholder="Explain what work you need, any specific requirements, materials needed, preferred quality, etc."
+                                                maxlength="1000"
+                                                required
+                                            ></textarea>
+
+
+                                            <span class="form-help">
+                                                Maximum 1000 characters.
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- Quick Requirements -->
+
+                                        <div class="requirement-tags">
+
+                                            <button
+                                                type="button"
+                                                class="requirement-tag"
+                                                data-requirement="Deep Cleaning">
+
+                                                Deep Cleaning
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="requirement-tag"
+                                                data-requirement="Experienced Worker">
+
+                                                Experienced Worker
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="requirement-tag"
+                                                data-requirement="Own Equipment">
+
+                                                Own Equipment
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="requirement-tag"
+                                                data-requirement="Urgent">
+
+                                                Urgent
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="requirement-tag"
+                                                data-requirement="Same Day">
+
+                                                Same Day
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- =================================================
+                                         DATE AND TIME
+                                         ================================================= -->
+
+                                    <div>
+
+                                        <h3 class="form-section-title">
+                                            Schedule
+                                        </h3>
+
+
+                                        <div class="post-form-row three">
+
+
+                                            <!-- Date -->
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobDate">
+
+                                                    Preferred Date
+                                                    <span class="required">*</span>
+
+                                                </label>
+
+
+                                                <input
+                                                    type="date"
+                                                    id="jobDate"
+                                                    name="date"
+                                                    required
+                                                >
+
+                                            </div>
+
+
+                                            <!-- Time -->
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobTime">
+
+                                                    Preferred Time
+                                                    <span class="required">*</span>
+
+                                                </label>
+
+
+                                                <input
+                                                    type="time"
+                                                    id="jobTime"
+                                                    name="time"
+                                                    required
+                                                >
+
+                                            </div>
+
+
+                                            <!-- Duration -->
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobDuration">
+
+                                                    Estimated Duration
+
+                                                </label>
+
+
+                                                <select
+                                                    id="jobDuration"
+                                                    name="duration"
+                                                >
+
+                                                    <option value="">
+                                                        Select duration
+                                                    </option>
+
+                                                    <option value="1 hour">
+                                                        Up to 1 Hour
+                                                    </option>
+
+                                                    <option value="2 hours">
+                                                        1 - 2 Hours
+                                                    </option>
+
+                                                    <option value="3 hours">
+                                                        2 - 3 Hours
+                                                    </option>
+
+                                                    <option value="4 hours">
+                                                        3 - 4 Hours
+                                                    </option>
+
+                                                    <option value="5+ hours">
+                                                        5+ Hours
+                                                    </option>
+
+                                                    <option value="flexible">
+                                                        Flexible
+                                                    </option>
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- =================================================
+                                         LOCATION
+                                         ================================================= -->
+
+                                    <div>
+
+                                        <h3 class="form-section-title">
+                                            Service Location
+                                        </h3>
+
+
+                                        <div class="post-form-group">
+
+                                            <label for="jobAddress">
+
+                                                Address
+                                                <span class="required">*</span>
+
+                                            </label>
+
+
+                                            <input
+                                                type="text"
+                                                id="jobAddress"
+                                                name="address"
+                                                placeholder="House/Flat No., Street, Area"
+                                                maxlength="250"
+                                                required
+                                            >
+
+                                        </div>
+
+
+                                        <br>
+
+
+                                        <div class="post-form-row three">
+
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobCity">
+
+                                                    City
+                                                    <span class="required">*</span>
+
+                                                </label>
+
+
+                                                <input
+                                                    type="text"
+                                                    id="jobCity"
+                                                    name="city"
+                                                    placeholder="e.g. Kanpur"
+                                                    value="Kanpur"
+                                                    required
+                                                >
+
+                                            </div>
+
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobState">
+
+                                                    State
+                                                    <span class="required">*</span>
+
+                                                </label>
+
+
+                                                <input
+                                                    type="text"
+                                                    id="jobState"
+                                                    name="state"
+                                                    placeholder="e.g. Uttar Pradesh"
+                                                    value="Uttar Pradesh"
+                                                    required
+                                                >
+
+                                            </div>
+
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobPincode">
+
+                                                    Pincode
+                                                    <span class="required">*</span>
+
+                                                </label>
+
+
+                                                <input
+                                                    type="text"
+                                                    id="jobPincode"
+                                                    name="pincode"
+                                                    placeholder="6 digit pincode"
+                                                    maxlength="6"
+                                                    inputmode="numeric"
+                                                    required
+                                                >
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <br>
+
+
+                                        <div class="post-form-group">
+
+                                            <label for="jobLandmark">
+
+                                                Landmark
+
+                                            </label>
+
+
+                                            <input
+                                                type="text"
+                                                id="jobLandmark"
+                                                name="landmark"
+                                                placeholder="Nearby landmark (optional)"
+                                                maxlength="150"
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- =================================================
+                                         BUDGET
+                                         ================================================= -->
+
+                                    <div>
+
+                                        <h3 class="form-section-title">
+
+                                            Budget
+
+                                            <span>
+                                                Professionals can send their own offers
+                                            </span>
+
+                                        </h3>
+
+
+                                        <div class="post-form-row">
+
+
+                                            <div class="post-form-group">
+
+                                                <label for="jobBudget">
+
+                                                    Your Budget
+                                                    <span class="required">*</span>
+
+                                                </label>
+
+
+                                                <div class="budget-input-wrapper">
+
+                                                    <span>
+                                                        ₹
+                                                    </span>
+
+
+                                                    <input
+                                                        type="number"
+                                                        id="jobBudget"
+                                                        name="budget"
+                                                        placeholder="e.g. 500"
+                                                        min="50"
+                                                        max="100000"
+                                                        required
+                                                    >
+
+                                                </div>
+
+                                                <span class="form-help">
+                                                    Set the maximum amount you
+                                                    are comfortable paying.
+                                                </span>
+
+                                            </div>
+
+
+                                            <div class="post-form-group">
+
+                                                <label for="budgetType">
+
+                                                    Budget Type
+
+                                                </label>
+
+
+                                                <select
+                                                    id="budgetType"
+                                                    name="budgetType"
+                                                >
+
+                                                    <option value="fixed">
+                                                        Fixed Budget
+                                                    </option>
+
+                                                    <option value="negotiable">
+                                                        Negotiable
+                                                    </option>
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- =================================================
+                                         ADDITIONAL REQUIREMENTS
+                                         ================================================= -->
+
+                                    <div>
+
+                                        <h3 class="form-section-title">
+                                            Additional Requirements
+                                        </h3>
+
+
+                                        <div class="post-form-group">
+
+                                            <label for="jobNotes">
+
+                                                Additional Notes
+
+                                            </label>
+
+
+                                            <textarea
+                                                id="jobNotes"
+                                                name="notes"
+                                                placeholder="Anything else the professional should know?"
+                                                maxlength="500"
+                                                style="min-height: 80px;"
+                                            ></textarea>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- =================================================
+                                         CONTACT PREFERENCE
+                                         ================================================= -->
+
+                                    <div>
+
+                                        <h3 class="form-section-title">
+                                            Contact Preference
+                                        </h3>
+
+
+                                        <div class="post-form-row">
+
+
+                                            <div class="post-form-group">
+
+                                                <label for="contactPreference">
+
+                                                    Preferred Contact
+
+                                                </label>
+
+
+                                                <select
+                                                    id="contactPreference"
+                                                    name="contactPreference"
+                                                >
+
+                                                    <option value="phone">
+                                                        Phone Call
+                                                    </option>
+
+                                                    <option value="message">
+                                                        In-App Message
+                                                    </option>
+
+                                                    <option value="both">
+                                                        Both
+                                                    </option>
+
+                                                </select>
+
+                                            </div>
+
+
+                                            <div class="post-form-group">
+
+                                                <label for="workerPreference">
+
+                                                    Worker Preference
+
+                                                </label>
+
+
+                                                <select
+                                                    id="workerPreference"
+                                                    name="workerPreference"
+                                                >
+
+                                                    <option value="any">
+                                                        Any Professional
+                                                    </option>
+
+                                                    <option value="verified">
+                                                        Verified Professionals Only
+                                                    </option>
+
+                                                    <option value="experienced">
+                                                        Experienced Professionals
+                                                    </option>
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- =================================================
+                                         TERMS
+                                         ================================================= -->
+
+                                    <label class="post-checkbox">
+
+                                        <input
+                                            type="checkbox"
+                                            id="jobTerms"
+                                            required
+                                        >
+
+
+                                        <span>
+
+                                            I confirm that the information
+                                            provided is accurate and I agree
+                                            to the SkillConnect
+                                            <a href="#">
+                                                Terms of Service
+                                            </a>
+                                            and
+                                            <a href="#">
+                                                Privacy Policy
+                                            </a>.
+
+                                        </span>
+
+                                    </label>
+
+
+                                    <!-- =================================================
+                                         ACTIONS
+                                         ================================================= -->
+
+                                    <div class="post-form-actions">
+
+
+                                        <button
+                                            type="button"
+                                            class="dashboard-btn dashboard-btn-secondary"
+                                            id="cancelPostJobBtn">
+
+                                            Cancel
+
+                                        </button>
+
+
+                                        <button
+                                            type="submit"
+                                            class="dashboard-btn dashboard-btn-primary"
+                                            id="postJobBtn">
+
+                                            <span>
+                                                ＋
+                                            </span>
+
+                                            Post Job
+
+                                        </button>
+
+                                    </div>
+
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             RIGHT SIDEBAR
+                             ================================================= -->
+
+                        <div>
+
+
+                            <!-- How It Works -->
+
+                            <div class="post-job-side-card">
+
+
+                                <div class="post-job-side-header">
+
+                                    <h3>
+                                        How It Works
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="post-job-side-body">
+
+
+                                    <div class="how-step">
+
+                                        <div class="how-step-number">
+                                            1
+                                        </div>
+
+                                        <div class="how-step-content">
+
+                                            <h4>
+                                                Post Your Requirement
+                                            </h4>
+
+                                            <p>
+                                                Tell us what service you need,
+                                                when and where.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="how-step">
+
+                                        <div class="how-step-number">
+                                            2
+                                        </div>
+
+                                        <div class="how-step-content">
+
+                                            <h4>
+                                                Receive Offers
+                                            </h4>
+
+                                            <p>
+                                                Nearby professionals can view
+                                                your job and send offers.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="how-step">
+
+                                        <div class="how-step-number">
+                                            3
+                                        </div>
+
+                                        <div class="how-step-content">
+
+                                            <h4>
+                                                Compare Professionals
+                                            </h4>
+
+                                            <p>
+                                                Compare price, experience,
+                                                ratings and reviews.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="how-step">
+
+                                        <div class="how-step-number">
+                                            4
+                                        </div>
+
+                                        <div class="how-step-content">
+
+                                            <h4>
+                                                Select & Book
+                                            </h4>
+
+                                            <p>
+                                                Accept the offer that matches
+                                                your requirement.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Tips -->
+
+                            <div class="post-job-side-card">
+
+
+                                <div class="post-job-side-header">
+
+                                    <h3>
+                                        Tips for Better Offers
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="post-job-side-body">
+
+
+                                    <div class="tips-list">
+
+
+                                        <div class="tip-item">
+
+                                            <span class="tip-icon">
+                                                ✓
+                                            </span>
+
+                                            <p>
+                                                Clearly describe the work
+                                                you need.
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="tip-item">
+
+                                            <span class="tip-icon">
+                                                ✓
+                                            </span>
+
+                                            <p>
+                                                Mention the preferred date
+                                                and time.
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="tip-item">
+
+                                            <span class="tip-icon">
+                                                ✓
+                                            </span>
+
+                                            <p>
+                                                Set a realistic budget.
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="tip-item">
+
+                                            <span class="tip-icon">
+                                                ✓
+                                            </span>
+
+                                            <p>
+                                                Add photos if they help
+                                                explain the requirement.
+                                            </p>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Info -->
+
+                            <div class="post-job-side-card">
+
+
+                                <div class="post-job-side-body">
+
+
+                                    <div class="post-job-info-box">
+
+
+                                        <div class="post-job-info-icon">
+                                            ℹ
+                                        </div>
+
+
+                                        <p>
+                                            Your contact details are kept
+                                            private. Professionals can only
+                                            contact you through the
+                                            SkillConnect platform until
+                                            you accept an offer.
+                                        </p>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div class="dashboard-toast"
+         id="dashboardToast">
+    </div>
+
+
+    <!-- =====================================================
+         POST JOB JAVASCRIPT
+         ===================================================== -->
+
+    <script type="module"
+            src="post-job.js"></script>
+
+
+</body>
+
+</html>

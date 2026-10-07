@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="SkillConnect Professional Dashboard">
+
+    <title>Worker Dashboard | SkillConnect</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="worker-dashboard.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="responsive.css">
+
+    <style>
+
+        /* =====================================================
+           WORKER DASHBOARD
+           ===================================================== */
+
+        .worker-dashboard-content {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           WELCOME BANNER
+           ===================================================== */
+
+        .worker-welcome-banner {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 25px 28px;
+            margin-bottom: 20px;
+            border-radius: 16px;
+            background: linear-gradient(
+                135deg,
+                #eff6ff,
+                #dbeafe
+            );
+        }
+
+
+        .worker-welcome-content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .worker-welcome-content h1 {
+            margin: 0 0 7px;
+            color: #111827;
+            font-size: 23px;
+        }
+
+
+        .worker-welcome-content p {
+            max-width: 600px;
+            margin: 0;
+            color: #64748b;
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+
+        .worker-availability-control {
+            position: relative;
+            z-index: 2;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 15px;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+        }
+
+
+        .availability-label {
+            color: #334155;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+
+        .availability-status {
+            color: #16a34a;
+            font-size: 8px;
+            font-weight: 600;
+        }
+
+
+        .availability-switch {
+            position: relative;
+            width: 38px;
+            height: 21px;
+        }
+
+
+        .availability-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+
+        .availability-slider {
+            position: absolute;
+            inset: 0;
+            border-radius: 30px;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+
+        .availability-slider::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: 3px;
+            top: 3px;
+            border-radius: 50%;
+            background: #ffffff;
+            transition: 0.2s ease;
+        }
+
+
+        .availability-switch input:checked
+        + .availability-slider {
+            background: #22c55e;
+        }
+
+
+        .availability-switch input:checked
+        + .availability-slider::before {
+            transform: translateX(17px);
+        }
+
+
+        /* =====================================================
+           STAT CARDS
+           ===================================================== */
+
+        .worker-stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+
+        .worker-stat-card {
+            padding: 17px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 13px;
+            box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+        }
+
+
+        .worker-stat-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+
+        .worker-stat-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 9px;
+            background: #eff6ff;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+
+        .worker-stat-change {
+            color: #16a34a;
+            font-size: 8px;
+            font-weight: 700;
+        }
+
+
+        .worker-stat-card h3 {
+            margin: 0 0 3px;
+            color: #111827;
+            font-size: 20px;
+        }
+
+
+        .worker-stat-card p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           MAIN GRID
+           ===================================================== */
+
+        .worker-main-grid {
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            gap: 18px;
+            align-items: start;
+        }
+
+
+        /* =====================================================
+           CONTENT CARD
+           ===================================================== */
+
+        .worker-card {
+            margin-bottom: 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+        }
+
+
+        .worker-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 16px 18px;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+
+        .worker-card-header h2 {
+            margin: 0;
+            color: #111827;
+            font-size: 14px;
+        }
+
+
+        .worker-card-header a {
+            color: #2563eb;
+            font-size: 9px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+
+        .worker-card-body {
+            padding: 18px;
+        }
+
+
+        /* =====================================================
+           JOB REQUEST
+           ===================================================== */
+
+        .job-request {
+            padding: 15px 18px;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+
+        .job-request:last-child {
+            border-bottom: none;
+        }
+
+
+        .job-request-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 9px;
+        }
+
+
+        .job-request-title {
+            min-width: 0;
+        }
+
+
+        .job-request-title h3 {
+            margin: 0 0 4px;
+            color: #111827;
+            font-size: 11px;
+        }
+
+
+        .job-request-title p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 8px;
+        }
+
+
+        .job-request-price {
+            flex-shrink: 0;
+            color: #111827;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+
+        .job-request-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 11px;
+        }
+
+
+        .job-meta-item {
+            color: #64748b;
+            font-size: 8px;
+        }
+
+
+        .job-request-actions {
+            display: flex;
+            gap: 7px;
+        }
+
+
+        .job-action-btn {
+            padding: 7px 11px;
+            border-radius: 6px;
+            font-size: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+
+        .job-action-primary {
+            border: none;
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+
+        .job-action-primary:hover {
+            background: #1d4ed8;
+        }
+
+
+        .job-action-secondary {
+            border: 1px solid #dbe1e8;
+            background: #ffffff;
+            color: #475569;
+        }
+
+
+        .job-action-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+
+        /* =====================================================
+           UPCOMING JOB
+           ===================================================== */
+
+        .upcoming-job {
+            padding: 16px;
+            border-radius: 10px;
+            background: #f8fafc;
+        }
+
+
+        .upcoming-job-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+
+        .upcoming-job h3 {
+            margin: 0 0 4px;
+            color: #111827;
+            font-size: 11px;
+        }
+
+
+        .upcoming-job p {
+            margin: 0;
+            color: #64748b;
+            font-size: 8px;
+        }
+
+
+        .upcoming-status {
+            height: fit-content;
+            padding: 5px 8px;
+            border-radius: 15px;
+            background: #dcfce7;
+            color: #15803d;
+            font-size: 8px;
+            font-weight: 700;
+        }
+
+
+        .upcoming-job-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 9px;
+            margin-top: 12px;
+        }
+
+
+        .upcoming-info-item {
+            padding: 9px;
+            border-radius: 7px;
+            background: #ffffff;
+        }
+
+
+        .upcoming-info-item span {
+            display: block;
+            margin-bottom: 3px;
+            color: #94a3b8;
+            font-size: 7px;
+        }
+
+
+        .upcoming-info-item strong {
+            color: #334155;
+            font-size: 8px;
+        }
+
+
+        /* =====================================================
+           EARNINGS
+           ===================================================== */
+
+        .earnings-card {
+            padding: 18px;
+        }
+
+
+        .earnings-total {
+            margin-bottom: 15px;
+        }
+
+
+        .earnings-total span {
+            display: block;
+            margin-bottom: 5px;
+            color: #94a3b8;
+            font-size: 9px;
+        }
+
+
+        .earnings-total strong {
+            color: #111827;
+            font-size: 25px;
+        }
+
+
+        .earnings-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 9px 0;
+            border-top: 1px solid #eef2f7;
+        }
+
+
+        .earnings-row span {
+            color: #64748b;
+            font-size: 8px;
+        }
+
+
+        .earnings-row strong {
+            color: #334155;
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           PROFILE COMPLETION
+           ===================================================== */
+
+        .profile-completion {
+            margin-bottom: 18px;
+            padding: 17px;
+            border-radius: 13px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+        }
+
+
+        .profile-completion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 9px;
+        }
+
+
+        .profile-completion-header h3 {
+            margin: 0;
+            color: #111827;
+            font-size: 11px;
+        }
+
+
+        .profile-completion-header span {
+            color: #2563eb;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+
+        .profile-progress {
+            height: 7px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #e2e8f0;
+        }
+
+
+        .profile-progress-bar {
+            width: 80%;
+            height: 100%;
+            border-radius: inherit;
+            background: #2563eb;
+        }
+
+
+        .profile-completion p {
+            margin: 8px 0 0;
+            color: #94a3b8;
+            font-size: 8px;
+        }
+
+
+        .complete-profile-btn {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2563eb;
+            font-size: 8px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           RATING
+           ===================================================== */
+
+        .worker-rating-card {
+            padding: 18px;
+            text-align: center;
+        }
+
+
+        .worker-rating-number {
+            color: #111827;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+
+        .worker-rating-stars {
+            margin: 4px 0 5px;
+            color: #f59e0b;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+
+        .worker-rating-card p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 8px;
+        }
+
+
+        /* =====================================================
+           QUICK ACTIONS
+           ===================================================== */
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 9px;
+        }
+
+
+        .quick-action {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px;
+            border: 1px solid #eef2f7;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #334155;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+
+        .quick-action:hover {
+            border-color: #bfdbfe;
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+
+        .quick-action-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 7px;
+            background: #eff6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+
+        .quick-action span {
+            font-size: 8px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           VERIFICATION
+           ===================================================== */
+
+        .verification-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 13px;
+            border-radius: 9px;
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+        }
+
+
+        .verification-icon {
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            border-radius: 8px;
+            background: #fef3c7;
+            color: #d97706;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .verification-box h4 {
+            margin: 0 0 4px;
+            color: #92400e;
+            font-size: 9px;
+        }
+
+
+        .verification-box p {
+            margin: 0;
+            color: #78716c;
+            font-size: 8px;
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           EMPTY STATE
+           ===================================================== */
+
+        .worker-empty-state {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+
+        .worker-empty-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 9px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 20px;
+        }
+
+
+        .worker-empty-state h3 {
+            margin: 0 0 4px;
+            color: #334155;
+            font-size: 12px;
+        }
+
+
+        .worker-empty-state p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 8px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .worker-stat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .worker-main-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .worker-welcome-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .worker-availability-control {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+        }
+
+
+        @media (max-width: 576px) {
+
+            .worker-stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .worker-welcome-banner {
+                padding: 20px;
+            }
+
+            .worker-welcome-content h1 {
+                font-size: 20px;
+            }
+
+            .upcoming-job-info {
+                grid-template-columns: 1fr;
+            }
+
+            .job-request-top {
+                flex-direction: column;
+            }
+
+            .job-request-price {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- =====================================================
+         DASHBOARD LAYOUT
+         ===================================================== -->
+
+    <div class="dashboard-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="dashboard-sidebar"
+               id="dashboardSidebar">
+
+
+            <!-- BRAND -->
+
+            <div class="sidebar-brand">
+
+                <a href="index.html">
+
+                    <div class="sidebar-logo">
+                        SC
+                    </div>
+
+                    <div class="sidebar-brand-name">
+                        Skill<span>Connect</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- WORKER PROFILE -->
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar"
+                     id="sidebarWorkerAvatar">
+                    AS
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <h4 id="sidebarWorkerName">
+                        Aman Sharma
+                    </h4>
+
+                    <p>
+                        Professional
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="sidebar-nav-title">
+                    Main Menu
+                </p>
+
+
+                <ul>
+
+
+                    <!-- Dashboard -->
+
+                    <li>
+
+                        <a href="worker-dashboard.html"
+                           class="sidebar-nav-link active">
+
+                            <span class="sidebar-nav-icon">
+                                ⌂
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Dashboard
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Jobs -->
+
+                    <li>
+
+                        <a href="worker-job.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▣
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Job Requests
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="jobRequestBadge">
+                                0
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Bookings -->
+
+                    <li>
+
+                        <a href="my-bookings.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▤
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Jobs
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="bookingCountBadge">
+                                0
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Notifications -->
+
+                    <li>
+
+                        <a href="notifications.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ♢
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Notifications
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <p class="sidebar-nav-title"
+                   style="margin-top:25px;">
+
+                    Professional
+
+                </p>
+
+
+                <ul>
+
+
+                    <!-- Profile -->
+
+                    <li>
+
+                        <a href="worker-profile.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ◉
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Profile
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Earnings -->
+
+                    <li>
+
+                        <a href="payments.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ₹
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Earnings
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Reviews -->
+
+                    <li>
+
+                        <a href="reviews.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ★
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Ratings & Reviews
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- LOGOUT -->
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-logout"
+                        id="logoutBtn">
+
+                    <span>
+                        ⇥
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================================
+                 HEADER
+                 ================================================= -->
+
+            <header class="dashboard-header">
+
+
+                <div class="dashboard-header-left">
+
+
+                    <button class="mobile-menu-btn"
+                            id="mobileMenuBtn">
+
+                        ☰
+
+                    </button>
+
+
+                    <div class="dashboard-header-title">
+
+                        <h2>
+                            Professional Dashboard
+                        </h2>
+
+                        <p>
+                            Manage your jobs and grow your business
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-header-right">
+
+
+                    <!-- Notification -->
+
+                    <button class="header-icon-btn"
+                            onclick="window.location.href='notifications.html'">
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- Worker -->
+
+                    <div class="header-user">
+
+                        <div class="header-avatar"
+                             id="headerAvatar">
+                            AS
+                        </div>
+
+                        <div class="header-user-info">
+
+                            <strong id="headerWorkerName">
+                                Aman Sharma
+                            </strong>
+
+                            <span>
+                                Professional
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 CONTENT
+                 ================================================= -->
+
+            <div class="dashboard-content">
+
+
+                <div class="worker-dashboard-content">
+
+
+                    <!-- =================================================
+                         WELCOME
+                         ================================================= -->
+
+                    <section class="worker-welcome-banner">
+
+
+                        <div class="worker-welcome-content">
+
+                            <h1 id="workerWelcomeName">
+                                Welcome back, Aman! 👋
+                            </h1>
+
+                            <p>
+                                Manage your job requests, upcoming
+                                services, earnings and professional
+                                profile from one place.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Availability -->
+
+                        <div class="worker-availability-control">
+
+
+                            <div>
+
+                                <div class="availability-label">
+                                    Availability
+                                </div>
+
+                                <div class="availability-status"
+                                     id="availabilityStatus">
+                                    Available for Jobs
+                                </div>
+
+                            </div>
+
+
+                            <label class="availability-switch">
+
+                                <input
+                                    type="checkbox"
+                                    id="availabilityToggle"
+                                    checked>
+
+                                <span class="availability-slider">
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- =================================================
+                         STATISTICS
+                         ================================================= -->
+
+                    <section class="worker-stat-grid">
+
+
+                        <!-- New Jobs -->
+
+                        <div class="worker-stat-card">
+
+                            <div class="worker-stat-top">
+
+                                <div class="worker-stat-icon">
+                                    ▣
+                                </div>
+
+                                <span class="worker-stat-change">
+                                    New
+                                </span>
+
+                            </div>
+
+                            <h3 id="newJobsCount">
+                                0
+                            </h3>
+
+                            <p>
+                                New Job Requests
+                            </p>
+
+                        </div>
+
+
+                        <!-- Active Jobs -->
+
+                        <div class="worker-stat-card">
+
+                            <div class="worker-stat-top">
+
+                                <div class="worker-stat-icon">
+                                    ⚙
+                                </div>
+
+                                <span class="worker-stat-change">
+                                    Active
+                                </span>
+
+                            </div>
+
+                            <h3 id="activeJobsCount">
+                                0
+                            </h3>
+
+                            <p>
+                                Active Jobs
+                            </p>
+
+                        </div>
+
+
+                        <!-- Completed -->
+
+                        <div class="worker-stat-card">
+
+                            <div class="worker-stat-top">
+
+                                <div class="worker-stat-icon">
+                                    ✓
+                                </div>
+
+                                <span class="worker-stat-change">
+                                    Total
+                                </span>
+
+                            </div>
+
+                            <h3 id="completedJobsCount">
+                                0
+                            </h3>
+
+                            <p>
+                                Completed Jobs
+                            </p>
+
+                        </div>
+
+
+                        <!-- Earnings -->
+
+                        <div class="worker-stat-card">
+
+                            <div class="worker-stat-top">
+
+                                <div class="worker-stat-icon">
+                                    ₹
+                                </div>
+
+                                <span class="worker-stat-change">
+                                    Earnings
+                                </span>
+
+                            </div>
+
+                            <h3 id="workerTotalEarnings">
+                                ₹0
+                            </h3>
+
+                            <p>
+                                Total Earnings
+                            </p>
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- =================================================
+                         MAIN GRID
+                         ================================================= -->
+
+                    <div class="worker-main-grid">
+
+
+                        <!-- =================================================
+                             LEFT COLUMN
+                             ================================================= -->
+
+                        <div>
+
+
+                            <!-- JOB REQUESTS -->
+
+                            <section class="worker-card">
+
+
+                                <div class="worker-card-header">
+
+                                    <h2>
+                                        New Job Requests
+                                    </h2>
+
+                                    <a href="worker-jobs.html">
+                                        View All
+                                    </a>
+
+                                </div>
+
+
+                                <div id="jobRequestsList">
+
+
+                                    <!-- Request 1 -->
+
+                                    <div class="job-request">
+
+
+                                        <div class="job-request-top">
+
+
+                                            <div class="job-request-title">
+
+                                                <h3>
+                                                    Bathroom Cleaning
+                                                </h3>
+
+                                                <p>
+                                                    Customer: Rahul Kumar
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="job-request-price">
+                                                ₹400
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="job-request-meta">
+
+                                            <span class="job-meta-item">
+                                                📅 25 Sep 2026
+                                            </span>
+
+                                            <span class="job-meta-item">
+                                                ⏰ 11:00 AM
+                                            </span>
+
+                                            <span class="job-meta-item">
+                                                📍 Kanpur
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="job-request-actions">
+
+                                            <button
+                                                class="job-action-btn job-action-primary"
+                                                data-action="accept"
+                                                data-job-id="sample-job-001">
+
+                                                Accept
+
+                                            </button>
+
+
+                                            <button
+                                                class="job-action-btn job-action-secondary"
+                                                data-action="view"
+                                                data-job-id="sample-job-001">
+
+                                                View Details
+
+                                            </button>
+
+
+                                            <button
+                                                class="job-action-btn job-action-secondary"
+                                                data-action="reject"
+                                                data-job-id="sample-job-001">
+
+                                                Reject
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Request 2 -->
+
+                                    <div class="job-request">
+
+
+                                        <div class="job-request-top">
+
+
+                                            <div class="job-request-title">
+
+                                                <h3>
+                                                    AC Service
+                                                </h3>
+
+                                                <p>
+                                                    Customer: Priya Singh
+                                                </p>
+
+                                            </div>
+
+
+                                            <div class="job-request-price">
+                                                ₹650
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="job-request-meta">
+
+                                            <span class="job-meta-item">
+                                                📅 27 Sep 2026
+                                            </span>
+
+                                            <span class="job-meta-item">
+                                                ⏰ 02:00 PM
+                                            </span>
+
+                                            <span class="job-meta-item">
+                                                📍 Kanpur
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="job-request-actions">
+
+                                            <button
+                                                class="job-action-btn job-action-primary"
+                                                data-action="accept"
+                                                data-job-id="sample-job-002">
+
+                                                Accept
+
+                                            </button>
+
+
+                                            <button
+                                                class="job-action-btn job-action-secondary"
+                                                data-action="view"
+                                                data-job-id="sample-job-002">
+
+                                                View Details
+
+                                            </button>
+
+
+                                            <button
+                                                class="job-action-btn job-action-secondary"
+                                                data-action="reject"
+                                                data-job-id="sample-job-002">
+
+                                                Reject
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <!-- Empty State -->
+
+                                <div class="worker-empty-state"
+                                     id="noJobRequests"
+                                     style="display:none;">
+
+                                    <div class="worker-empty-icon">
+                                        ✓
+                                    </div>
+
+                                    <h3>
+                                        No New Job Requests
+                                    </h3>
+
+                                    <p>
+                                        New opportunities will appear here.
+                                    </p>
+
+                                </div>
+
+
+                            </section>
+
+
+                            <!-- UPCOMING JOB -->
+
+                            <section class="worker-card">
+
+
+                                <div class="worker-card-header">
+
+                                    <h2>
+                                        Upcoming Job
+                                    </h2>
+
+                                    <a href="my-bookings.html">
+                                        View All
+                                    </a>
+
+                                </div>
+
+
+                                <div class="worker-card-body">
+
+
+                                    <div class="upcoming-job"
+                                         id="upcomingJob">
+
+
+                                        <div class="upcoming-job-top">
+
+
+                                            <div>
+
+                                                <h3>
+                                                    Bathroom Cleaning
+                                                </h3>
+
+                                                <p>
+                                                    Customer: Rahul Kumar
+                                                </p>
+
+                                            </div>
+
+
+                                            <span class="upcoming-status">
+                                                Accepted
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="upcoming-job-info">
+
+
+                                            <div class="upcoming-info-item">
+
+                                                <span>
+                                                    Date
+                                                </span>
+
+                                                <strong>
+                                                    25 Sep 2026
+                                                </strong>
+
+                                            </div>
+
+
+                                            <div class="upcoming-info-item">
+
+                                                <span>
+                                                    Time
+                                                </span>
+
+                                                <strong>
+                                                    11:00 AM
+                                                </strong>
+
+                                            </div>
+
+
+                                            <div class="upcoming-info-item">
+
+                                                <span>
+                                                    Location
+                                                </span>
+
+                                                <strong>
+                                                    Kanpur
+                                                </strong>
+
+                                            </div>
+
+
+                                            <div class="upcoming-info-item">
+
+                                                <span>
+                                                    Amount
+                                                </span>
+
+                                                <strong>
+                                                    ₹400
+                                                </strong>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                            </section>
+
+
+                        </div>
+
+
+                        <!-- =================================================
+                             RIGHT COLUMN
+                             ================================================= -->
+
+                        <aside>
+
+
+                            <!-- PROFILE COMPLETION -->
+
+                            <div class="profile-completion">
+
+
+                                <div class="profile-completion-header">
+
+                                    <h3>
+                                        Profile Completion
+                                    </h3>
+
+                                    <span id="profileCompletion">
+                                        80%
+                                    </span>
+
+                                </div>
+
+
+                                <div class="profile-progress">
+
+                                    <div
+                                        class="profile-progress-bar"
+                                        id="profileProgressBar">
+                                    </div>
+
+                                </div>
+
+
+                                <p id="profileCompletionText">
+                                    Add portfolio images and service
+                                    details to complete your profile.
+                                </p>
+
+
+                                <a href="worker-profile.html"
+                                   class="complete-profile-btn">
+
+                                    Complete Profile →
+
+                                </a>
+
+                            </div>
+
+
+                            <!-- EARNINGS -->
+
+                            <section class="worker-card">
+
+
+                                <div class="worker-card-header">
+
+                                    <h2>
+                                        Earnings
+                                    </h2>
+
+                                    <a href="payments.html">
+                                        Details
+                                    </a>
+
+                                </div>
+
+
+                                <div class="earnings-card">
+
+
+                                    <div class="earnings-total">
+
+                                        <span>
+                                            This Month
+                                        </span>
+
+                                        <strong id="monthlyEarnings">
+                                            ₹0
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="earnings-row">
+
+                                        <span>
+                                            Completed Jobs
+                                        </span>
+
+                                        <strong id="monthlyCompletedJobs">
+                                            0
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="earnings-row">
+
+                                        <span>
+                                            Pending Payments
+                                        </span>
+
+                                        <strong id="pendingEarnings">
+                                            ₹0
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="earnings-row">
+
+                                        <span>
+                                            Platform Fee
+                                        </span>
+
+                                        <strong id="platformFee">
+                                            ₹0
+                                        </strong>
+
+                                    </div>
+
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- RATING -->
+
+                            <section class="worker-card">
+
+
+                                <div class="worker-card-header">
+
+                                    <h2>
+                                        Your Rating
+                                    </h2>
+
+                                    <a href="reviews.html">
+                                        Reviews
+                                    </a>
+
+                                </div>
+
+
+                                <div class="worker-rating-card">
+
+
+                                    <div class="worker-rating-number"
+                                         id="workerRating">
+                                        4.8
+                                    </div>
+
+
+                                    <div class="worker-rating-stars"
+                                         id="workerRatingStars">
+                                        ★★★★★
+                                    </div>
+
+
+                                    <p>
+                                        Based on
+                                        <span id="workerReviewCount">
+                                            24
+                                        </span>
+                                        customer reviews
+                                    </p>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- QUICK ACTIONS -->
+
+                            <section class="worker-card">
+
+
+                                <div class="worker-card-header">
+
+                                    <h2>
+                                        Quick Actions
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="worker-card-body">
+
+
+                                    <div class="quick-actions">
+
+
+                                        <a href="worker-profile.html"
+                                           class="quick-action">
+
+                                            <div class="quick-action-icon">
+                                                ◉
+                                            </div>
+
+                                            <span>
+                                                Edit Profile
+                                            </span>
+
+                                        </a>
+
+
+                                        <a href="worker-jobs.html"
+                                           class="quick-action">
+
+                                            <div class="quick-action-icon">
+                                                ▣
+                                            </div>
+
+                                            <span>
+                                                Find Jobs
+                                            </span>
+
+                                        </a>
+
+
+                                        <a href="payments.html"
+                                           class="quick-action">
+
+                                            <div class="quick-action-icon">
+                                                ₹
+                                            </div>
+
+                                            <span>
+                                                Earnings
+                                            </span>
+
+                                        </a>
+
+
+                                        <a href="notifications.html"
+                                           class="quick-action">
+
+                                            <div class="quick-action-icon">
+                                                ♢
+                                            </div>
+
+                                            <span>
+                                                Notifications
+                                            </span>
+
+                                        </a>
+
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- VERIFICATION -->
+
+                            <section class="worker-card">
+
+
+                                <div class="worker-card-body">
+
+
+                                    <div class="verification-box"
+                                         id="verificationBox">
+
+
+                                        <div class="verification-icon">
+                                            ✓
+                                        </div>
+
+
+                                        <div>
+
+                                            <h4 id="verificationTitle">
+                                                Profile Verification
+                                            </h4>
+
+                                            <p id="verificationMessage">
+                                                Your professional profile
+                                                is being reviewed by the
+                                                SkillConnect team.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                        </aside>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div class="dashboard-toast"
+         id="dashboardToast">
+    </div>
+
+
+    <!-- =====================================================
+         WORKER JAVASCRIPT
+         ===================================================== -->
+
+    <script type="module"
+            src="worker-dashboard.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Find and book trusted professionals on SkillConnect">
+
+    <title>Services | SkillConnect</title>
+
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="responsive.css">
+
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- =====================================================
+         DASHBOARD LAYOUT
+         ===================================================== -->
+
+    <div class="dashboard-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="dashboard-sidebar"
+               id="dashboardSidebar">
+
+
+            <!-- Brand -->
+
+            <div class="sidebar-brand">
+
+                <a href="index.html">
+
+                    <div class="sidebar-logo">
+                        SC
+                    </div>
+
+                    <div class="sidebar-brand-name">
+                        Skill<span>Connect</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Customer Profile -->
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar"
+                     id="sidebarCustomerAvatar">
+                    RK
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <h4 id="sidebarCustomerName">
+                        Rahul Kumar
+                    </h4>
+
+                    <p>
+                        Customer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="sidebar-nav-title">
+                    Main Menu
+                </p>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a href="customer-dashboard.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ⌂
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Dashboard
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="service.html"
+                           class="sidebar-nav-link active">
+
+                            <span class="sidebar-nav-icon">
+                                ▦
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Services
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="my-bookings.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▣
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Bookings
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="bookingCountBadge">
+                                0
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="post-job.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ＋
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Post a Job
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="notifications.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ♢
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Notifications
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <p class="sidebar-nav-title"
+                   style="margin-top:25px;">
+
+                    Account
+
+                </p>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a href="customer-profile.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ◉
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Profile
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="payments.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ₹
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Payments
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="reviews.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ★
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Reviews & Ratings
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-logout"
+                        id="logoutBtn">
+
+                    <span>
+                        ⇥
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================================
+                 HEADER
+                 ================================================= -->
+
+            <header class="dashboard-header">
+
+
+                <div class="dashboard-header-left">
+
+
+                    <button class="mobile-menu-btn"
+                            id="mobileMenuBtn">
+
+                        ☰
+
+                    </button>
+
+
+                    <div class="dashboard-header-title">
+
+                        <h2>
+                            Services
+                        </h2>
+
+                        <p>
+                            Find the right professional for your work
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-header-right">
+
+
+                    <button class="header-icon-btn"
+                            onclick="window.location.href='notifications.html'">
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <div class="header-user">
+
+                        <div class="header-avatar"
+                             id="headerAvatar">
+                            RK
+                        </div>
+
+                        <div class="header-user-info">
+
+                            <strong id="headerName">
+                                Rahul Kumar
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 CONTENT
+                 ================================================= -->
+
+            <div class="dashboard-content">
+
+
+                <div class="services-page">
+
+
+                    <!-- =================================================
+                         INTRO
+                         ================================================= -->
+
+                    <div class="services-intro">
+
+                        <h1>
+                            What service do you need?
+                        </h1>
+
+                        <p>
+                            Browse services and connect with verified
+                            professionals near you.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SEARCH
+                         ================================================= -->
+
+                    <div class="services-search-box">
+
+
+                        <span class="services-search-icon">
+                            🔍
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="serviceSearchInput"
+                            placeholder="Search for a service...">
+
+
+                        <button
+                            class="services-search-btn"
+                            id="serviceSearchBtn">
+
+                            Search
+
+                        </button>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CATEGORIES
+                         ================================================= -->
+
+                    <div class="category-filter"
+                         id="categoryFilter">
+
+
+                        <button
+                            class="category-btn active"
+                            data-category="all">
+
+                            All Services
+
+                        </button>
+
+
+                        <button
+                            class="category-btn"
+                            data-category="cleaning">
+
+                            Cleaning
+
+                        </button>
+
+
+                        <button
+                            class="category-btn"
+                            data-category="plumbing">
+
+                            Plumbing
+
+                        </button>
+
+
+                        <button
+                            class="category-btn"
+                            data-category="electrical">
+
+                            Electrical
+
+                        </button>
+
+
+                        <button
+                            class="category-btn"
+                            data-category="ac">
+
+                            AC & Appliance
+
+                        </button>
+
+
+                        <button
+                            class="category-btn"
+                            data-category="beauty">
+
+                            Beauty
+
+                        </button>
+
+
+                        <button
+                            class="category-btn"
+                            data-category="repair">
+
+                            Repair
+
+                        </button>
+
+
+                        <button
+                            class="category-btn"
+                            data-category="moving">
+
+                            Moving
+
+                        </button>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SERVICE SECTION
+                         ================================================= -->
+
+                    <div class="services-section-header">
+
+                        <h2>
+                            Popular Services
+                        </h2>
+
+                        <span class="services-count"
+                              id="servicesCount">
+
+                            12 services
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SERVICES GRID
+                         ================================================= -->
+
+                    <div class="services-grid"
+                         id="servicesGrid">
+
+
+                        <!-- Bathroom Cleaning -->
+
+                        <article class="service-card"
+                                 data-service="Bathroom Cleaning"
+                                 data-category="cleaning"
+                                 data-search="bathroom cleaning home cleaning">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    🧹
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Bathroom Cleaning
+                                </h3>
+
+                                <p>
+                                    Deep and hygienic bathroom cleaning
+                                    by trained professionals.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹399
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.8
+                                        <span>
+                                            (24)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Home Cleaning -->
+
+                        <article class="service-card"
+                                 data-service="Home Cleaning"
+                                 data-category="cleaning"
+                                 data-search="home cleaning house cleaning">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    🏠
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Home Cleaning
+                                </h3>
+
+                                <p>
+                                    Complete home cleaning service
+                                    for a fresh and clean space.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹499
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.7
+                                        <span>
+                                            (31)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Plumbing -->
+
+                        <article class="service-card"
+                                 data-service="Plumbing"
+                                 data-category="plumbing"
+                                 data-search="plumber plumbing pipe tap">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    🔧
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Plumbing
+                                </h3>
+
+                                <p>
+                                    Tap, pipe, leakage and bathroom
+                                    plumbing solutions.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹299
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.8
+                                        <span>
+                                            (42)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Electrician -->
+
+                        <article class="service-card"
+                                 data-service="Electrician"
+                                 data-category="electrical"
+                                 data-search="electrician electrical fan light wiring">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    ⚡
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Electrician
+                                </h3>
+
+                                <p>
+                                    Electrical repair, wiring, fan,
+                                    switch and light installation.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹249
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.9
+                                        <span>
+                                            (38)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- AC Service -->
+
+                        <article class="service-card"
+                                 data-service="AC Service"
+                                 data-category="ac"
+                                 data-search="ac service air conditioner cooling">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    ❄️
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    AC Service
+                                </h3>
+
+                                <p>
+                                    AC cleaning, servicing, repair
+                                    and gas-related services.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹499
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.8
+                                        <span>
+                                            (29)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Appliance Repair -->
+
+                        <article class="service-card"
+                                 data-service="Appliance Repair"
+                                 data-category="repair"
+                                 data-search="appliance repair washing machine refrigerator">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    🔌
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Appliance Repair
+                                </h3>
+
+                                <p>
+                                    Repair services for common household
+                                    electrical appliances.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹349
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.7
+                                        <span>
+                                            (21)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Salon -->
+
+                        <article class="service-card"
+                                 data-service="Salon at Home"
+                                 data-category="beauty"
+                                 data-search="salon beauty haircut facial makeup">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    💇
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Salon at Home
+                                </h3>
+
+                                <p>
+                                    Haircut, styling, facial and beauty
+                                    services at your home.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹299
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.8
+                                        <span>
+                                            (19)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Painting -->
+
+                        <article class="service-card"
+                                 data-service="Painting"
+                                 data-category="repair"
+                                 data-search="painting wall paint house">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    🎨
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Painting
+                                </h3>
+
+                                <p>
+                                    Professional wall painting and
+                                    home painting services.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹1,499
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.6
+                                        <span>
+                                            (17)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Carpenter -->
+
+                        <article class="service-card"
+                                 data-service="Carpenter"
+                                 data-category="repair"
+                                 data-search="carpenter furniture wood repair">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    🪚
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Carpenter
+                                </h3>
+
+                                <p>
+                                    Furniture repair, fitting and
+                                    carpentry work.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹299
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.7
+                                        <span>
+                                            (26)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Packers -->
+
+                        <article class="service-card"
+                                 data-service="Packers & Movers"
+                                 data-category="moving"
+                                 data-search="packers movers shifting moving">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    📦
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Packers & Movers
+                                </h3>
+
+                                <p>
+                                    Reliable packing, loading and
+                                    moving assistance.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹999
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.6
+                                        <span>
+                                            (15)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Pest Control -->
+
+                        <article class="service-card"
+                                 data-service="Pest Control"
+                                 data-category="cleaning"
+                                 data-search="pest control insects cockroach mosquito">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    🐜
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Pest Control
+                                </h3>
+
+                                <p>
+                                    Professional pest control for
+                                    homes and offices.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹599
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.7
+                                        <span>
+                                            (18)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Water Purifier -->
+
+                        <article class="service-card"
+                                 data-service="Water Purifier Service"
+                                 data-category="repair"
+                                 data-search="water purifier ro service filter">
+
+                            <div class="service-card-top">
+
+                                <div class="service-card-icon">
+                                    💧
+                                </div>
+
+                            </div>
+
+
+                            <div class="service-card-content">
+
+                                <h3>
+                                    Water Purifier Service
+                                </h3>
+
+                                <p>
+                                    RO cleaning, filter replacement
+                                    and purifier repair.
+                                </p>
+
+
+                                <div class="service-card-bottom">
+
+                                    <span class="service-price">
+                                        ₹299
+                                        <span>
+                                            starting
+                                        </span>
+                                    </span>
+
+
+                                    <span class="service-rating">
+                                        ★ 4.8
+                                        <span>
+                                            (23)
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- No Result -->
+
+                        <div class="no-service-result"
+                             id="noServiceResult">
+
+                            <div class="no-service-icon">
+                                🔍
+                            </div>
+
+                            <h3>
+                                No service found
+                            </h3>
+
+                            <p>
+                                Try another service name or category.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CUSTOM JOB
+                         ================================================= -->
+
+                    <div class="custom-job-card">
+
+
+                        <div class="custom-job-content">
+
+                            <h3>
+                                Can't find the service you need?
+                            </h3>
+
+                            <p>
+                                Post your requirement and let nearby
+                                professionals send you offers.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="custom-job-btn"
+                            id="postCustomJobBtn">
+
+                            Post a Job
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div class="dashboard-toast"
+         id="dashboardToast">
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script type="module"
+            src="services.js"></script>
+
+
+</body>
+
+</html>

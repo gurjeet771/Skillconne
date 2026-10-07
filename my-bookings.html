@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="My Bookings - SkillConnect">
+
+    <title>My Bookings | SkillConnect</title>
+
+
+    <!-- =====================================================
+         BOOKING CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="my-bookings.css">
+
+    <!-- Responsive CSS -->
+
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- =====================================================
+         DASHBOARD LAYOUT
+         ===================================================== -->
+
+    <div class="dashboard-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="dashboard-sidebar"
+               id="dashboardSidebar">
+
+
+            <!-- Brand -->
+
+            <div class="sidebar-brand">
+
+                <a href="index.html">
+
+                    <div class="sidebar-logo">
+                        SC
+                    </div>
+
+                    <div class="sidebar-brand-name">
+                        Skill<span>Connect</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Profile -->
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar"
+                     id="sidebarCustomerAvatar">
+                    RK
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <h4 id="sidebarCustomerName">
+                        Rahul Kumar
+                    </h4>
+
+                    <p>
+                        Customer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="sidebar-nav-title">
+                    Main Menu
+                </p>
+
+
+                <ul>
+
+
+                    <!-- Dashboard -->
+
+                    <li>
+
+                        <a href="coustomer-dashboard.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ⌂
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Dashboard
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Services -->
+
+                    <li>
+
+                        <a href="services.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▦
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Services
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- My Bookings -->
+
+                    <li>
+
+                        <a href="my-bookings.html"
+                           class="sidebar-nav-link active">
+
+                            <span class="sidebar-nav-icon">
+                                ▣
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Bookings
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="bookingCountBadge">
+                                0
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Post Job -->
+
+                    <li>
+
+                        <a href="post-job.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ＋
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Post a Job
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Notifications -->
+
+                    <li>
+
+                        <a href="notifications.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ♢
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Notifications
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <p class="sidebar-nav-title"
+                   style="margin-top: 25px;">
+
+                    Account
+
+                </p>
+
+
+                <ul>
+
+
+                    <!-- Profile -->
+
+                    <li>
+
+                        <a href="coustomer-profile.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ◉
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Profile
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Payments -->
+
+                    <li>
+
+                        <a href="payments.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ₹
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Payments
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-logout"
+                        id="logoutBtn">
+
+                    <span>
+                        ⇥
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN AREA
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================================
+                 HEADER
+                 ================================================= -->
+
+            <header class="dashboard-header">
+
+
+                <div class="dashboard-header-left">
+
+
+                    <!-- Mobile Menu -->
+
+                    <button class="mobile-menu-btn"
+                            id="mobileMenuBtn">
+
+                        ☰
+
+                    </button>
+
+
+                    <div class="dashboard-header-title">
+
+                        <h2>
+                            My Bookings
+                        </h2>
+
+                        <p>
+                            Manage and track your service bookings
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Header Right -->
+
+                <div class="dashboard-header-right">
+
+
+                    <!-- Notifications -->
+
+                    <button class="header-icon-btn"
+                            id="notificationBtn"
+                            onclick="window.location.href='notifications.html'">
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- User -->
+
+                    <div class="header-user">
+
+
+                        <div class="header-avatar"
+                             id="headerAvatar">
+
+                            RK
+
+                        </div>
+
+
+                        <div class="header-user-info">
+
+                            <strong id="headerName">
+                                Rahul Kumar
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 CONTENT
+                 ================================================= -->
+
+            <div class="dashboard-content">
+
+
+                <div class="dashboard-container">
+
+
+                    <!-- =================================================
+                         PAGE HEADER
+                         ================================================= -->
+
+                    <div class="section-page-header">
+
+
+                        <div>
+
+                            <h2>
+                                My Bookings
+                            </h2>
+
+                            <p>
+                                View, track and manage all your service bookings.
+                            </p>
+
+                        </div>
+
+
+                        <div class="section-actions">
+
+
+                            <a href="booking.html"
+                               class="dashboard-btn dashboard-btn-primary">
+
+                                ＋ Book a Service
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         BOOKING FILTERS
+                         ================================================= -->
+
+                    <div class="dashboard-filter-bar">
+
+
+                        <!-- Search -->
+
+                        <div class="dashboard-filter-group">
+
+                            <label for="bookingSearch">
+                                Search
+                            </label>
+
+                            <input
+                                type="search"
+                                id="bookingSearch"
+                                placeholder="Search bookings..."
+                            >
+
+                        </div>
+
+
+                        <!-- Status -->
+
+                        <div class="dashboard-filter-group">
+
+                            <label for="bookingStatusFilter">
+                                Status
+                            </label>
+
+                            <select id="bookingStatusFilter">
+
+                                <option value="all">
+                                    All Bookings
+                                </option>
+
+                                <option value="PENDING">
+                                    Pending
+                                </option>
+
+                                <option value="ACCEPTED">
+                                    Accepted
+                                </option>
+
+                                <option value="ON_THE_WAY">
+                                    On the Way
+                                </option>
+
+                                <option value="STARTED">
+                                    Started
+                                </option>
+
+                                <option value="COMPLETED">
+                                    Completed
+                                </option>
+
+                                <option value="PAID">
+                                    Paid
+                                </option>
+
+                                <option value="REVIEWED">
+                                    Reviewed
+                                </option>
+
+                                <option value="CANCELLED">
+                                    Cancelled
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Date -->
+
+                        <div class="dashboard-filter-group">
+
+                            <label for="bookingDateFilter">
+                                Date
+                            </label>
+
+                            <select id="bookingDateFilter">
+
+                                <option value="all">
+                                    All Dates
+                                </option>
+
+                                <option value="upcoming">
+                                    Upcoming
+                                </option>
+
+                                <option value="past">
+                                    Past
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Clear -->
+
+                        <button
+                            type="button"
+                            class="dashboard-btn dashboard-btn-secondary dashboard-btn-small"
+                            id="clearBookingFilters">
+
+                            Clear Filters
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         BOOKING SUMMARY
+                         ================================================= -->
+
+                    <div class="dashboard-stats">
+
+
+                        <!-- Total -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    ▣
+                                </div>
+
+                            </div>
+
+                            <div class="stat-label">
+                                Total Bookings
+                            </div>
+
+                            <div class="stat-value"
+                                 id="totalBookings">
+                                0
+                            </div>
+
+                            <div class="stat-change neutral">
+                                All bookings
+                            </div>
+
+                        </div>
+
+
+                        <!-- Active -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    ◷
+                                </div>
+
+                            </div>
+
+                            <div class="stat-label">
+                                Active Bookings
+                            </div>
+
+                            <div class="stat-value"
+                                 id="activeBookings">
+                                0
+                            </div>
+
+                            <div class="stat-change positive">
+                                In progress
+                            </div>
+
+                        </div>
+
+
+                        <!-- Completed -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    ✓
+                                </div>
+
+                            </div>
+
+                            <div class="stat-label">
+                                Completed
+                            </div>
+
+                            <div class="stat-value"
+                                 id="completedBookings">
+                                0
+                            </div>
+
+                            <div class="stat-change positive">
+                                Successfully completed
+                            </div>
+
+                        </div>
+
+
+                        <!-- Spending -->
+
+                        <div class="stat-card">
+
+                            <div class="stat-card-top">
+
+                                <div class="stat-icon">
+                                    ₹
+                                </div>
+
+                            </div>
+
+                            <div class="stat-label">
+                                Total Spent
+                            </div>
+
+                            <div class="stat-value"
+                                 id="totalSpent">
+                                ₹0
+                            </div>
+
+                            <div class="stat-change neutral">
+                                Service payments
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         BOOKINGS CARD
+                         ================================================= -->
+
+                    <div class="dashboard-card">
+
+
+                        <!-- Card Header -->
+
+                        <div class="dashboard-card-header">
+
+
+                            <div>
+
+                                <h3 class="dashboard-card-title">
+                                    Booking History
+                                </h3>
+
+                                <p class="dashboard-card-subtitle">
+                                    All your service requests and bookings
+                                </p>
+
+                            </div>
+
+
+                            <a href="services.html"
+                               class="dashboard-card-action">
+
+                                Find Services
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             LOADING
+                             ================================================= -->
+
+                        <div class="dashboard-loading"
+                             id="bookingsLoading">
+
+                            <div class="dashboard-spinner"></div>
+
+                            Loading your bookings...
+
+                        </div>
+
+
+                        <!-- =================================================
+                             BOOKINGS LIST
+                             ================================================= -->
+
+                        <div class="recent-bookings"
+                             id="bookingsList">
+
+
+                            <!-- Booking 1 -->
+
+                            <div class="booking-item"
+                                 data-booking-id="sample-001"
+                                 data-status="ACCEPTED"
+                                 data-service="Bathroom Cleaning">
+
+
+                                <div class="booking-service-icon">
+                                    🧹
+                                </div>
+
+
+                                <div class="booking-item-info">
+
+                                    <h4>
+                                        Bathroom Cleaning
+                                    </h4>
+
+                                    <p>
+                                        25 Sep 2026 · 11:00 AM
+                                    </p>
+
+                                    <p>
+                                        Kanpur, Uttar Pradesh
+                                    </p>
+
+                                </div>
+
+
+                                <div class="booking-item-right">
+
+
+                                    <span class="status-badge status-accepted">
+                                        Accepted
+                                    </span>
+
+
+                                    <div class="booking-item-price">
+                                        ₹400
+                                    </div>
+
+
+                                    <a href="booking-details.html?id=sample-001"
+                                       class="dashboard-btn dashboard-btn-secondary dashboard-btn-small">
+
+                                        View
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Booking 2 -->
+
+                            <div class="booking-item"
+                                 data-booking-id="sample-002"
+                                 data-status="COMPLETED"
+                                 data-service="AC Service">
+
+
+                                <div class="booking-service-icon">
+                                    ❄
+                                </div>
+
+
+                                <div class="booking-item-info">
+
+                                    <h4>
+                                        AC Service
+                                    </h4>
+
+                                    <p>
+                                        20 Sep 2026 · 02:00 PM
+                                    </p>
+
+                                    <p>
+                                        Kanpur, Uttar Pradesh
+                                    </p>
+
+                                </div>
+
+
+                                <div class="booking-item-right">
+
+
+                                    <span class="status-badge status-completed">
+                                        Completed
+                                    </span>
+
+
+                                    <div class="booking-item-price">
+                                        ₹650
+                                    </div>
+
+
+                                    <a href="booking-details.html?id=sample-002"
+                                       class="dashboard-btn dashboard-btn-secondary dashboard-btn-small">
+
+                                        View
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Booking 3 -->
+
+                            <div class="booking-item"
+                                 data-booking-id="sample-003"
+                                 data-status="PENDING"
+                                 data-service="Home Cleaning">
+
+
+                                <div class="booking-service-icon">
+                                    🏠
+                                </div>
+
+
+                                <div class="booking-item-info">
+
+                                    <h4>
+                                        Home Cleaning
+                                    </h4>
+
+                                    <p>
+                                        28 Sep 2026 · 10:00 AM
+                                    </p>
+
+                                    <p>
+                                        Kanpur, Uttar Pradesh
+                                    </p>
+
+                                </div>
+
+
+                                <div class="booking-item-right">
+
+
+                                    <span class="status-badge status-pending">
+                                        Pending
+                                    </span>
+
+
+                                    <div class="booking-item-price">
+                                        ₹800
+                                    </div>
+
+
+                                    <a href="booking-details.html?id=sample-003"
+                                       class="dashboard-btn dashboard-btn-secondary dashboard-btn-small">
+
+                                        View
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- =================================================
+                             EMPTY STATE
+                             ================================================= -->
+
+                        <div class="dashboard-empty"
+                             id="noBookingsMessage"
+                             style="display: none;">
+
+
+                            <div class="dashboard-empty-icon">
+                                ▣
+                            </div>
+
+
+                            <h3>
+                                No bookings found
+                            </h3>
+
+
+                            <p>
+                                You don't have any bookings matching
+                                the selected filters.
+                            </p>
+
+
+                            <br>
+
+
+                            <a href="services.html"
+                               class="dashboard-btn dashboard-btn-primary">
+
+                                Find a Service
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         HELP CARD
+                         ================================================= -->
+
+                    <div class="post-job-card"
+                         style="margin-top: 20px;">
+
+
+                        <div class="post-job-content">
+
+                            <h3>
+                                Need a professional for something specific?
+                            </h3>
+
+                            <p>
+                                Post your requirement and let nearby
+                                professionals send you their offers.
+                            </p>
+
+                        </div>
+
+
+                        <a href="post-job.html"
+                           class="dashboard-btn dashboard-btn-primary">
+
+                            Post a Job
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div class="dashboard-toast"
+         id="dashboardToast">
+    </div>
+
+
+    <!-- =====================================================
+         BOOKING JAVASCRIPT
+         ===================================================== -->
+
+    <script type="module"
+            src="my-bookings.js"></script>
+
+
+</body>
+
+</html>

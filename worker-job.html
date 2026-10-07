@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="SkillConnect Worker Job Requests">
+
+    <title>Job Requests | SkillConnect</title>
+
+    <!-- ONLY THIS CSS FILE -->
+    <link rel="stylesheet" href="worker-job.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+            <div class="sidebar-brand">
+                <a href="index.html">
+                    <div class="sidebar-logo">SC</div>
+
+                    <div class="sidebar-brand-name">
+                        Skill<span>Connect</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Worker Profile -->
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar" id="sidebarWorkerAvatar">
+                    AS
+                </div>
+
+                <div class="sidebar-profile-info">
+                    <h4 id="sidebarWorkerName">
+                        Aman Sharma
+                    </h4>
+
+                    <p>Professional</p>
+                </div>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+                <p class="sidebar-nav-title">
+                    Main Menu
+                </p>
+
+                <ul>
+
+                    <li>
+                        <a href="worker-dashboard.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">⌂</span>
+
+                            <span class="sidebar-nav-text">
+                                Dashboard
+                            </span>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="worker-job.html"
+                           class="sidebar-nav-link active">
+
+                            <span class="sidebar-nav-icon">▣</span>
+
+                            <span class="sidebar-nav-text">
+                                Job Requests
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="jobRequestBadge">
+                                0
+                            </span>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="my-bookings.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">▤</span>
+
+                            <span class="sidebar-nav-text">
+                                My Jobs
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="bookingCountBadge">
+                                0
+                            </span>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="notifications.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">♢</span>
+
+                            <span class="sidebar-nav-text">
+                                Notifications
+                            </span>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+                <p class="sidebar-nav-title professional-title">
+                    Professional
+                </p>
+
+                <ul>
+
+                    <li>
+                        <a href="worker-profile.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">◉</span>
+
+                            <span class="sidebar-nav-text">
+                                My Profile
+                            </span>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="payments.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">₹</span>
+
+                            <span class="sidebar-nav-text">
+                                Earnings
+                            </span>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reviews.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">★</span>
+
+                            <span class="sidebar-nav-text">
+                                Ratings & Reviews
+                            </span>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Logout -->
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-logout"
+                        id="logoutBtn">
+
+                    <span>⇥</span>
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="dashboard-main">
+
+            <!-- Header -->
+
+            <header class="dashboard-header">
+
+                <div class="dashboard-header-left">
+
+                    <button class="mobile-menu-btn"
+                            id="mobileMenuBtn">
+                        ☰
+                    </button>
+
+                    <div class="dashboard-header-title">
+
+                        <h2>Job Requests</h2>
+
+                        <p>
+                            Find and manage customer job requests
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-header-right">
+
+                    <button class="header-icon-btn"
+                            onclick="window.location.href='notifications.html'">
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+                    <div class="header-user">
+
+                        <div class="header-avatar"
+                             id="headerAvatar">
+                            AS
+                        </div>
+
+                        <div class="header-user-info">
+
+                            <strong id="headerWorkerName">
+                                Aman Sharma
+                            </strong>
+
+                            <span>
+                                Professional
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= CONTENT ================= -->
+
+            <div class="dashboard-content">
+
+                <div class="worker-jobs-page">
+
+                    <!-- Page Header -->
+
+                    <div class="jobs-page-header">
+
+                        <div class="jobs-page-title">
+
+                            <h1>
+                                Available Job Requests
+                            </h1>
+
+                            <p>
+                                Choose jobs according to your skills,
+                                location and availability.
+                            </p>
+
+                        </div>
+
+                        <button class="find-job-btn"
+                                id="refreshJobsBtn">
+                            ↻ Refresh Jobs
+                        </button>
+
+                    </div>
+
+
+                    <!-- Statistics -->
+
+                    <div class="job-stat-grid">
+
+                        <div class="job-stat-card">
+                            <span>New Requests</span>
+
+                            <strong id="newJobsCount">
+                                0
+                            </strong>
+                        </div>
+
+                        <div class="job-stat-card">
+                            <span>Accepted Jobs</span>
+
+                            <strong id="acceptedJobsCount">
+                                0
+                            </strong>
+                        </div>
+
+                        <div class="job-stat-card">
+                            <span>Completed</span>
+
+                            <strong id="completedJobsCount">
+                                0
+                            </strong>
+                        </div>
+
+                        <div class="job-stat-card">
+                            <span>Total Earnings</span>
+
+                            <strong id="totalEarnings">
+                                ₹0
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Filters -->
+
+                    <div class="job-filter-card">
+
+                        <div class="job-search-box">
+
+                            <span>🔍</span>
+
+                            <input
+                                type="text"
+                                id="jobSearchInput"
+                                placeholder="Search jobs, service or location..."
+                            >
+
+                        </div>
+
+
+                        <select class="job-filter-select"
+                                id="jobCategoryFilter">
+
+                            <option value="all">
+                                All Categories
+                            </option>
+
+                            <option value="cleaning">
+                                Cleaning
+                            </option>
+
+                            <option value="plumbing">
+                                Plumbing
+                            </option>
+
+                            <option value="electrical">
+                                Electrical
+                            </option>
+
+                            <option value="ac">
+                                AC & Appliance
+                            </option>
+
+                            <option value="repair">
+                                Repair
+                            </option>
+
+                            <option value="beauty">
+                                Beauty
+                            </option>
+
+                            <option value="moving">
+                                Moving
+                            </option>
+
+                        </select>
+
+
+                        <select class="job-filter-select"
+                                id="jobStatusFilter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="pending">
+                                New
+                            </option>
+
+                            <option value="accepted">
+                                Accepted
+                            </option>
+
+                            <option value="rejected">
+                                Rejected
+                            </option>
+
+                            <option value="completed">
+                                Completed
+                            </option>
+
+                        </select>
+
+
+                        <button class="clear-filter-btn"
+                                id="clearJobFilters">
+                            Clear
+                        </button>
+
+                    </div>
+
+
+                    <!-- Main Grid -->
+
+                    <div class="worker-jobs-grid">
+
+
+                        <!-- Job List -->
+
+                        <section class="jobs-list-card">
+
+                            <div class="jobs-list-header">
+
+                                <h2>
+                                    Job Opportunities
+                                </h2>
+
+                                <span id="jobsCount">
+                                    0 jobs
+                                </span>
+
+                            </div>
+
+
+                            <div class="jobs-loading"
+                                 id="jobsLoading">
+                                Loading job requests...
+                            </div>
+
+
+                            <div id="workerJobsList">
+                                <!-- Jobs generated by JavaScript -->
+                            </div>
+
+
+                            <div class="jobs-empty"
+                                 id="jobsEmpty">
+
+                                <div class="jobs-empty-icon">
+                                    🔍
+                                </div>
+
+                                <h3>
+                                    No Jobs Found
+                                </h3>
+
+                                <p>
+                                    Try changing your search or filters.
+                                </p>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- Right Sidebar -->
+
+                        <aside>
+
+
+                            <!-- Availability -->
+
+                            <div class="worker-job-side-card">
+
+                                <div class="worker-job-side-header">
+
+                                    <h3>
+                                        Your Availability
+                                    </h3>
+
+                                </div>
+
+                                <div class="worker-job-side-body">
+
+                                    <div class="availability-box">
+
+                                        <h4 id="sideAvailabilityTitle">
+                                            You are available
+                                        </h4>
+
+                                        <p id="sideAvailabilityText">
+                                            Customers can send you new
+                                            job requests.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Tips -->
+
+                            <div class="worker-job-side-card">
+
+                                <div class="worker-job-side-header">
+
+                                    <h3>
+                                        Tips for Getting More Jobs
+                                    </h3>
+
+                                </div>
+
+                                <div class="worker-job-side-body">
+
+
+                                    <div class="job-tip">
+
+                                        <div class="job-tip-icon">
+                                            ★
+                                        </div>
+
+                                        <p>
+                                            Keep your profile complete
+                                            and updated.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="job-tip">
+
+                                        <div class="job-tip-icon">
+                                            ⚡
+                                        </div>
+
+                                        <p>
+                                            Respond to new requests
+                                            quickly.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="job-tip">
+
+                                        <div class="job-tip-icon">
+                                            ✓
+                                        </div>
+
+                                        <p>
+                                            Maintain good ratings and
+                                            customer reviews.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="job-tip">
+
+                                        <div class="job-tip-icon">
+                                            📍
+                                        </div>
+
+                                        <p>
+                                            Keep your service location
+                                            accurate.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Professional Profile -->
+
+                            <div class="worker-job-side-card">
+
+                                <div class="worker-job-side-header">
+
+                                    <h3>
+                                        Professional Profile
+                                    </h3>
+
+                                </div>
+
+                                <div class="worker-job-side-body">
+
+                                    <p class="profile-description">
+                                        A complete profile helps
+                                        customers understand your
+                                        skills and experience.
+                                    </p>
+
+                                    <button class="find-job-btn profile-btn"
+                                            onclick="window.location.href='worker-profile.html'">
+
+                                        Edit Profile
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </aside>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Toast -->
+
+    <div class="dashboard-toast"
+         id="dashboardToast">
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="worker-job.js"></script>
+
+</body>
+
+</html>

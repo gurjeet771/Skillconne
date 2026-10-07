@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | SkillConnect</title>
+
+    <meta name="description"
+        content="SkillConnect Admin Dashboard - Manage users, professionals, bookings, services and reports.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Dashboard CSS -->
+    <link rel="stylesheet" href="admin-dashboard.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         ADMIN DASHBOARD
+         ===================================================== -->
+
+    <div class="dashboard-wrapper">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <!-- Logo -->
+
+            <div class="sidebar-logo">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-icon">⚡</span>
+
+                    Skill<span>Connect</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- Admin Profile -->
+
+            <div class="admin-profile">
+
+                <div class="admin-avatar">
+                    👨‍💼
+                </div>
+
+                <div class="admin-info">
+
+                    <h3>Admin</h3>
+
+                    <p>Administrator</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sidebar Navigation -->
+
+            <nav class="sidebar-nav">
+
+                <p class="nav-title">
+                    MAIN MENU
+                </p>
+
+
+                <a href="#dashboard"
+                    class="sidebar-link active"
+                    data-section="dashboard">
+
+                    <span class="nav-icon">📊</span>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="#users"
+                    class="sidebar-link"
+                    data-section="users">
+
+                    <span class="nav-icon">👥</span>
+
+                    <span>Users</span>
+
+                </a>
+
+
+                <a href="#professionals"
+                    class="sidebar-link"
+                    data-section="professionals">
+
+                    <span class="nav-icon">🧑‍🔧</span>
+
+                    <span>Professionals</span>
+
+                </a>
+
+
+                <a href="#services"
+                    class="sidebar-link"
+                    data-section="services">
+
+                    <span class="nav-icon">🛠️</span>
+
+                    <span>Services</span>
+
+                </a>
+
+
+                <a href="#bookings"
+                    class="sidebar-link"
+                    data-section="bookings">
+
+                    <span class="nav-icon">📅</span>
+
+                    <span>Bookings</span>
+
+                </a>
+
+
+                <a href="#jobs"
+                    class="sidebar-link"
+                    data-section="jobs">
+
+                    <span class="nav-icon">📋</span>
+
+                    <span>Posted Jobs</span>
+
+                </a>
+
+
+                <a href="#reviews"
+                    class="sidebar-link"
+                    data-section="reviews">
+
+                    <span class="nav-icon">⭐</span>
+
+                    <span>Reviews</span>
+
+                </a>
+
+
+                <p class="nav-title second-title">
+                    MANAGEMENT
+                </p>
+
+
+                <a href="#payments"
+                    class="sidebar-link"
+                    data-section="payments">
+
+                    <span class="nav-icon">💳</span>
+
+                    <span>Payments</span>
+
+                </a>
+
+
+                <a href="#reports"
+                    class="sidebar-link"
+                    data-section="reports">
+
+                    <span class="nav-icon">📈</span>
+
+                    <span>Reports</span>
+
+                </a>
+
+
+                <a href="#complaints"
+                    class="sidebar-link"
+                    data-section="complaints">
+
+                    <span class="nav-icon">⚠️</span>
+
+                    <span>Complaints</span>
+
+                </a>
+
+
+                <a href="#settings"
+                    class="sidebar-link"
+                    data-section="settings">
+
+                    <span class="nav-icon">⚙️</span>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html"
+                    class="sidebar-link">
+
+                    <span class="nav-icon">🏠</span>
+
+                    <span>Visit Website</span>
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link logout-btn"
+                    id="logoutBtn">
+
+                    <span class="nav-icon">🚪</span>
+
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOP HEADER
+                 ================================================= -->
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <button
+                        type="button"
+                        class="mobile-menu-btn"
+                        id="mobileMenuBtn">
+
+                        ☰
+
+                    </button>
+
+
+                    <div>
+
+                        <h1>
+                            Admin Dashboard
+                        </h1>
+
+                        <p>
+                            Manage your SkillConnect platform
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header-right">
+
+
+                    <!-- Search -->
+
+                    <div class="dashboard-search">
+
+                        <span>🔍</span>
+
+                        <input
+                            type="text"
+                            id="adminSearch"
+                            placeholder="Search...">
+
+                    </div>
+
+
+                    <!-- Notification -->
+
+                    <button
+                        type="button"
+                        class="header-icon-btn"
+                        id="notificationBtn"
+                        title="Notifications">
+
+                        🔔
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- Admin -->
+
+                    <div class="header-user">
+
+                        <div class="header-avatar">
+                            👨‍💼
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Admin
+                            </strong>
+
+                            <small>
+                                Administrator
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 DASHBOARD SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section active-section"
+                id="dashboard">
+
+
+                <!-- Welcome -->
+
+                <div class="welcome-card">
+
+                    <div>
+
+                        <span>
+                            Welcome back 👋
+                        </span>
+
+                        <h2>
+                            Manage SkillConnect
+                        </h2>
+
+                        <p>
+                            Monitor users, professionals, bookings,
+                            services and platform activity from here.
+                        </p>
+
+                    </div>
+
+                    <div class="welcome-icon">
+                        📊
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STAT CARDS
+                     ================================================= -->
+
+                <div class="stats-grid">
+
+
+                    <!-- Users -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon blue">
+                                👥
+                            </div>
+
+                            <span class="stat-growth positive">
+                                +12.5%
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Total Users
+                        </p>
+
+                        <h3 id="totalUsers">
+                            1,248
+                        </h3>
+
+                        <small>
+                            Compared to last month
+                        </small>
+
+                    </div>
+
+
+                    <!-- Professionals -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon green">
+                                🧑‍🔧
+                            </div>
+
+                            <span class="stat-growth positive">
+                                +8.4%
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Professionals
+                        </p>
+
+                        <h3 id="totalProfessionals">
+                            524
+                        </h3>
+
+                        <small>
+                            Verified professionals
+                        </small>
+
+                    </div>
+
+
+                    <!-- Bookings -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon orange">
+                                📅
+                            </div>
+
+                            <span class="stat-growth positive">
+                                +15.2%
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Total Bookings
+                        </p>
+
+                        <h3 id="totalBookings">
+                            3,846
+                        </h3>
+
+                        <small>
+                            All time bookings
+                        </small>
+
+                    </div>
+
+
+                    <!-- Revenue -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon purple">
+                                💰
+                            </div>
+
+                            <span class="stat-growth positive">
+                                +18.7%
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Total Revenue
+                        </p>
+
+                        <h3 id="totalRevenue">
+                            ₹8.42L
+                        </h3>
+
+                        <small>
+                            Platform revenue
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     MIDDLE CONTENT
+                     ================================================= -->
+
+                <div class="admin-grid">
+
+
+                    <!-- Recent Bookings -->
+
+                    <div class="dashboard-card large-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h2>
+                                    Recent Bookings
+                                </h2>
+
+                                <p>
+                                    Latest service bookings
+                                </p>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="view-all-btn"
+                                data-section="bookings">
+
+                                View All →
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="table-wrapper">
+
+                            <table class="admin-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>
+                                            Customer
+                                        </th>
+
+                                        <th>
+                                            Service
+                                        </th>
+
+                                        <th>
+                                            Professional
+                                        </th>
+
+                                        <th>
+                                            Amount
+                                        </th>
+
+                                        <th>
+                                            Status
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="recentBookingsTable">
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="table-user">
+
+                                                <div class="table-avatar">
+                                                    👨
+                                                </div>
+
+                                                <div>
+
+                                                    <strong>
+                                                        Rahul Kumar
+                                                    </strong>
+
+                                                    <small>
+                                                        #BK1024
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            Plumbing
+                                        </td>
+
+
+                                        <td>
+                                            Amit Sharma
+                                        </td>
+
+
+                                        <td>
+                                            ₹450
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="status accepted">
+                                                Accepted
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="table-user">
+
+                                                <div class="table-avatar">
+                                                    👩
+                                                </div>
+
+                                                <div>
+
+                                                    <strong>
+                                                        Priya Singh
+                                                    </strong>
+
+                                                    <small>
+                                                        #BK1023
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            Home Cleaning
+                                        </td>
+
+
+                                        <td>
+                                            Neha Verma
+                                        </td>
+
+
+                                        <td>
+                                            ₹650
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="status completed">
+                                                Completed
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="table-user">
+
+                                                <div class="table-avatar">
+                                                    👨
+                                                </div>
+
+                                                <div>
+
+                                                    <strong>
+                                                        Arjun Singh
+                                                    </strong>
+
+                                                    <small>
+                                                        #BK1022
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            Electrician
+                                        </td>
+
+
+                                        <td>
+                                            Rakesh Yadav
+                                        </td>
+
+
+                                        <td>
+                                            ₹350
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="status pending">
+                                                Pending
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div class="table-user">
+
+                                                <div class="table-avatar">
+                                                    👩
+                                                </div>
+
+                                                <div>
+
+                                                    <strong>
+                                                        Anjali Gupta
+                                                    </strong>
+
+                                                    <small>
+                                                        #BK1021
+                                                    </small>
+
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            Home Tutor
+                                        </td>
+
+
+                                        <td>
+                                            Pooja Singh
+                                        </td>
+
+
+                                        <td>
+                                            ₹500
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="status cancelled">
+                                                Cancelled
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Platform Overview -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h2>
+                                    Platform Overview
+                                </h2>
+
+                                <p>
+                                    Current platform status
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="overview-list">
+
+
+                            <div class="overview-item">
+
+                                <div class="overview-icon blue">
+                                    👥
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <strong>
+                                        Customers
+                                    </strong>
+
+                                    <span>
+                                        724
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="overview-item">
+
+                                <div class="overview-icon green">
+                                    🧑‍🔧
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <strong>
+                                        Verified Workers
+                                    </strong>
+
+                                    <span>
+                                        418
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="overview-item">
+
+                                <div class="overview-icon orange">
+                                    🛠️
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <strong>
+                                        Services
+                                    </strong>
+
+                                    <span>
+                                        50+
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="overview-item">
+
+                                <div class="overview-icon purple">
+                                    ⭐
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <strong>
+                                        Reviews
+                                    </strong>
+
+                                    <span>
+                                        2,184
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PENDING PROFESSIONALS
+                     ================================================= -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Professionals Waiting for Verification
+                            </h2>
+
+                            <p>
+                                Review and verify new professionals
+                            </p>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="view-all-btn"
+                            data-section="professionals">
+
+                            View All →
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="professional-list">
+
+
+                        <div class="professional-row">
+
+                            <div class="professional-user">
+
+                                <div class="professional-avatar-small">
+                                    👨‍🔧
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Suresh Kumar
+                                    </strong>
+
+                                    <small>
+                                        Plumber • Kanpur
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="professional-experience">
+                                4 Years Experience
+                            </div>
+
+
+                            <div class="professional-actions">
+
+                                <button
+                                    type="button"
+                                    class="action-btn approve"
+                                    data-action="approve">
+
+                                    ✓ Approve
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="action-btn reject"
+                                    data-action="reject">
+
+                                    ✕ Reject
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="professional-row">
+
+                            <div class="professional-user">
+
+                                <div class="professional-avatar-small">
+                                    👩‍💻
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Sneha Gupta
+                                    </strong>
+
+                                    <small>
+                                        Graphic Designer • Lucknow
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="professional-experience">
+                                3 Years Experience
+                            </div>
+
+
+                            <div class="professional-actions">
+
+                                <button
+                                    type="button"
+                                    class="action-btn approve"
+                                    data-action="approve">
+
+                                    ✓ Approve
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="action-btn reject"
+                                    data-action="reject">
+
+                                    ✕ Reject
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="professional-row">
+
+                            <div class="professional-user">
+
+                                <div class="professional-avatar-small">
+                                    👨‍🏫
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Mohit Singh
+                                    </strong>
+
+                                    <small>
+                                        Home Tutor • Kanpur
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="professional-experience">
+                                5 Years Experience
+                            </div>
+
+
+                            <div class="professional-actions">
+
+                                <button
+                                    type="button"
+                                    class="action-btn approve"
+                                    data-action="approve">
+
+                                    ✓ Approve
+
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="action-btn reject"
+                                    data-action="reject">
+
+                                    ✕ Reject
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 USERS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="users">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Users
+                        </h2>
+
+                        <p>
+                            Manage registered customers
+                        </p>
+
+                    </div>
+
+                    <button class="btn-primary-admin">
+                        + Add User
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        User
+                                    </th>
+
+                                    <th>
+                                        Email
+                                    </th>
+
+                                    <th>
+                                        Phone
+                                    </th>
+
+                                    <th>
+                                        Location
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Rahul Kumar
+                                    </td>
+
+                                    <td>
+                                        rahul@example.com
+                                    </td>
+
+                                    <td>
+                                        +91 98765 43210
+                                    </td>
+
+                                    <td>
+                                        Kanpur
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="table-action">
+                                            View
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Priya Singh
+                                    </td>
+
+                                    <td>
+                                        priya@example.com
+                                    </td>
+
+                                    <td>
+                                        +91 98765 12345
+                                    </td>
+
+                                    <td>
+                                        Lucknow
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="table-action">
+                                            View
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFESSIONALS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="professionals">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Professionals
+                        </h2>
+
+                        <p>
+                            Verify and manage service providers
+                        </p>
+
+                    </div>
+
+                    <button class="btn-primary-admin">
+                        + Add Professional
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Professional
+                                    </th>
+
+                                    <th>
+                                        Skill
+                                    </th>
+
+                                    <th>
+                                        Experience
+                                    </th>
+
+                                    <th>
+                                        Rating
+                                    </th>
+
+                                    <th>
+                                        Verification
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Amit Sharma
+                                    </td>
+
+                                    <td>
+                                        Plumber
+                                    </td>
+
+                                    <td>
+                                        5 Years
+                                    </td>
+
+                                    <td>
+                                        ⭐ 4.9
+                                    </td>
+
+                                    <td>
+                                        <span class="status verified-status">
+                                            Verified
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="table-action">
+                                            Manage
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Neha Verma
+                                    </td>
+
+                                    <td>
+                                        Home Cleaning
+                                    </td>
+
+                                    <td>
+                                        4 Years
+                                    </td>
+
+                                    <td>
+                                        ⭐ 4.8
+                                    </td>
+
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button class="table-action">
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SERVICES SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="services">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Services
+                        </h2>
+
+                        <p>
+                            Manage SkillConnect service categories
+                        </p>
+
+                    </div>
+
+                    <button class="btn-primary-admin">
+                        + Add Service
+                    </button>
+
+                </div>
+
+
+                <div class="admin-service-grid">
+
+
+                    <div class="admin-service-card">
+
+                        <div class="service-admin-icon">
+                            🔧
+                        </div>
+
+                        <h3>
+                            Plumbing
+                        </h3>
+
+                        <p>
+                            86 Professionals
+                        </p>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-service-card">
+
+                        <div class="service-admin-icon">
+                            ⚡
+                        </div>
+
+                        <h3>
+                            Electrician
+                        </h3>
+
+                        <p>
+                            72 Professionals
+                        </p>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-service-card">
+
+                        <div class="service-admin-icon">
+                            🧹
+                        </div>
+
+                        <h3>
+                            Cleaning
+                        </h3>
+
+                        <p>
+                            64 Professionals
+                        </p>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-service-card">
+
+                        <div class="service-admin-icon">
+                            📚
+                        </div>
+
+                        <h3>
+                            Home Tutor
+                        </h3>
+
+                        <p>
+                            58 Professionals
+                        </p>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BOOKINGS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="bookings">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Bookings
+                        </h2>
+
+                        <p>
+                            Monitor all customer bookings
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Booking ID
+                                    </th>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Service
+                                    </th>
+
+                                    <th>
+                                        Professional
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        #BK1024
+                                    </td>
+
+                                    <td>
+                                        Rahul Kumar
+                                    </td>
+
+                                    <td>
+                                        Plumbing
+                                    </td>
+
+                                    <td>
+                                        Amit Sharma
+                                    </td>
+
+                                    <td>
+                                        ₹450
+                                    </td>
+
+                                    <td>
+                                        <span class="status accepted">
+                                            Accepted
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        #BK1023
+                                    </td>
+
+                                    <td>
+                                        Priya Singh
+                                    </td>
+
+                                    <td>
+                                        Cleaning
+                                    </td>
+
+                                    <td>
+                                        Neha Verma
+                                    </td>
+
+                                    <td>
+                                        ₹650
+                                    </td>
+
+                                    <td>
+                                        <span class="status completed">
+                                            Completed
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 JOBS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="jobs">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Posted Jobs
+                        </h2>
+
+                        <p>
+                            Customer jobs posted on the platform
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            📋
+                        </div>
+
+                        <h3>
+                            Job Management
+                        </h3>
+
+                        <p>
+                            Customer posted jobs will appear here
+                            after Firebase integration.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 REVIEWS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="reviews">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Reviews
+                        </h2>
+
+                        <p>
+                            Monitor customer feedback
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="review-admin-item">
+
+                        <div class="review-user">
+                            👨
+                        </div>
+
+                        <div class="review-content">
+
+                            <strong>
+                                Rahul Kumar
+                            </strong>
+
+                            <div>
+                                ⭐⭐⭐⭐⭐
+                            </div>
+
+                            <p>
+                                Professional provided excellent service
+                                and arrived on time.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENTS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="payments">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Payments
+                        </h2>
+
+                        <p>
+                            Monitor platform transactions
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <p>
+                            Total Transactions
+                        </p>
+
+                        <h3>
+                            3,124
+                        </h3>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <p>
+                            Successful Payments
+                        </p>
+
+                        <h3>
+                            ₹7.86L
+                        </h3>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <p>
+                            Pending Payments
+                        </p>
+
+                        <h3>
+                            ₹24.5K
+                        </h3>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <p>
+                            Refunds
+                        </p>
+
+                        <h3>
+                            ₹8.2K
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 REPORTS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="reports">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Reports
+                        </h2>
+
+                        <p>
+                            Platform performance reports
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            📈
+                        </div>
+
+                        <h3>
+                            Reports & Analytics
+                        </h3>
+
+                        <p>
+                            Detailed reports and analytics will be
+                            connected with Firestore data.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMPLAINTS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="complaints">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Complaints
+                        </h2>
+
+                        <p>
+                            Manage customer and professional complaints
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ⚠️
+                        </div>
+
+                        <h3>
+                            No Active Complaints
+                        </h3>
+
+                        <p>
+                            New complaints will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SETTINGS SECTION
+                 ================================================= -->
+
+            <section
+                class="dashboard-section"
+                id="settings">
+
+                <div class="page-title">
+
+                    <div>
+
+                        <h2>
+                            Settings
+                        </h2>
+
+                        <p>
+                            Manage administrator settings
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card settings-card">
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h3>
+                                Platform Notifications
+                            </h3>
+
+                            <p>
+                                Receive notifications about new bookings
+                                and registrations.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h3>
+                                New Professional Alerts
+                            </h3>
+
+                            <p>
+                                Get notified when a professional
+                                requests verification.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="admin-dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,863 @@
+/* =========================================================
+   SkillConnect - Services Page
+   File: service.css
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #111827;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================================
+   DASHBOARD LAYOUT
+   ========================================================= */
+
+.dashboard-page {
+    min-height: 100vh;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.dashboard-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 235px;
+    height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sidebar-brand {
+    padding: 20px 18px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-brand a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.sidebar-brand-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.sidebar-brand-name span {
+    color: #2563eb;
+}
+
+/* =========================================================
+   SIDEBAR PROFILE
+   ========================================================= */
+
+.sidebar-profile {
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.sidebar-profile-info {
+    min-width: 0;
+}
+
+.sidebar-profile-info h4 {
+    margin: 0 0 3px;
+    color: #111827;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-profile-info p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.sidebar-nav {
+    flex: 1;
+    padding: 18px 10px;
+}
+
+.sidebar-nav-title {
+    margin: 0 8px 8px;
+    color: #94a3b8;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 3px;
+}
+
+.sidebar-nav-link {
+    min-height: 42px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    transition: 0.2s ease;
+}
+
+.sidebar-nav-link:hover {
+    background: #f8fafc;
+    color: #2563eb;
+}
+
+.sidebar-nav-link.active {
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.sidebar-nav-icon {
+    width: 22px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.sidebar-nav-text {
+    flex: 1;
+    font-size: 10px;
+}
+
+.sidebar-nav-badge {
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   SIDEBAR LOGOUT
+   ========================================================= */
+
+.sidebar-bottom {
+    padding: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.sidebar-logout {
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #fff1f2;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.sidebar-logout:hover {
+    background: #fee2e2;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.dashboard-main {
+    width: calc(100% - 235px);
+    margin-left: 235px;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.dashboard-header {
+    height: 70px;
+    padding: 0 28px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.dashboard-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-header-title h2 {
+    margin: 0 0 3px;
+    color: #111827;
+    font-size: 16px;
+}
+
+.dashboard-header-title p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+.dashboard-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icon-btn {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e5e7eb;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #64748b;
+    position: relative;
+    font-size: 16px;
+}
+
+.header-icon-btn:hover {
+    background: #f8fafc;
+    color: #2563eb;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ef4444;
+    border: 1px solid #ffffff;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.header-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.header-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.header-user-info strong {
+    color: #111827;
+    font-size: 10px;
+}
+
+.header-user-info span {
+    color: #94a3b8;
+    font-size: 8px;
+}
+
+.mobile-menu-btn {
+    display: none;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+    color: #334155;
+    font-size: 18px;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.dashboard-content {
+    padding: 28px;
+}
+
+.services-page {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.services-intro {
+    margin-bottom: 20px;
+}
+
+.services-intro h1 {
+    margin: 0 0 5px;
+    color: #111827;
+    font-size: 24px;
+}
+
+.services-intro p {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.services-search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.services-search-icon {
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+.services-search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    color: #334155;
+    font-size: 11px;
+    background: transparent;
+}
+
+.services-search-box input::placeholder {
+    color: #94a3b8;
+}
+
+.services-search-btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.services-search-btn:hover {
+    background: #1d4ed8;
+}
+
+/* =========================================================
+   CATEGORY FILTER
+   ========================================================= */
+
+.category-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.category-btn {
+    padding: 8px 13px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #ffffff;
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.services-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 14px;
+}
+
+.services-section-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 15px;
+}
+
+.services-count {
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+/* =========================================================
+   SERVICE GRID
+   ========================================================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    border-color: #bfdbfe;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.service-card.hidden {
+    display: none;
+}
+
+.service-card-top {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+}
+
+.service-card-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    box-shadow: 0 7px 20px rgba(37, 99, 235, 0.1);
+}
+
+.service-card-content {
+    padding: 14px;
+}
+
+.service-card-content h3 {
+    margin: 0 0 5px;
+    color: #111827;
+    font-size: 12px;
+}
+
+.service-card-content p {
+    min-height: 30px;
+    margin: 0 0 10px;
+    color: #64748b;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.service-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.service-price {
+    color: #111827;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.service-price span {
+    color: #94a3b8;
+    font-size: 8px;
+    font-weight: 500;
+}
+
+.service-rating {
+    color: #f59e0b;
+    font-size: 9px;
+}
+
+.service-rating span {
+    color: #94a3b8;
+    margin-left: 2px;
+}
+
+/* =========================================================
+   NO RESULT
+   ========================================================= */
+
+.no-service-result {
+    display: none;
+    grid-column: 1 / -1;
+    padding: 60px 20px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+}
+
+.no-service-result.show {
+    display: block;
+}
+
+.no-service-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 22px;
+}
+
+.no-service-result h3 {
+    margin: 0 0 5px;
+    color: #334155;
+    font-size: 15px;
+}
+
+.no-service-result p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 9px;
+}
+
+/* =========================================================
+   CUSTOM JOB
+   ========================================================= */
+
+.custom-job-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 25px;
+    padding: 22px 25px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.custom-job-content h3 {
+    margin: 0 0 5px;
+    color: #111827;
+    font-size: 15px;
+}
+
+.custom-job-content p {
+    margin: 0;
+    color: #64748b;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.custom-job-btn {
+    flex-shrink: 0;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.custom-job-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+.dashboard-toast {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    min-width: 240px;
+    max-width: 350px;
+    padding: 13px 17px;
+    border-radius: 9px;
+    background: #111827;
+    color: white;
+    font-size: 10px;
+    line-height: 1.5;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+    z-index: 3000;
+}
+
+.dashboard-toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .dashboard-sidebar.open {
+        transform: translateX(0);
+    }
+
+    .dashboard-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-search-box {
+        flex-wrap: wrap;
+    }
+
+    .services-search-box input {
+        min-width: 150px;
+    }
+
+    .dashboard-content {
+        padding: 20px;
+    }
+
+    .dashboard-header {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-intro h1 {
+        font-size: 21px;
+    }
+
+    .dashboard-content {
+        padding: 16px;
+    }
+
+    .dashboard-header {
+        height: 62px;
+        padding: 0 15px;
+    }
+
+    .dashboard-header-title p {
+        display: none;
+    }
+
+    .header-user-info {
+        display: none;
+    }
+
+    .header-icon-btn {
+        width: 33px;
+        height: 33px;
+    }
+
+    .category-filter {
+        gap: 6px;
+    }
+
+    .category-btn {
+        padding: 7px 10px;
+    }
+
+    .custom-job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .custom-job-btn {
+        width: 100%;
+    }
+
+    .services-search-box {
+        padding: 10px;
+    }
+
+    .services-search-btn {
+        width: 100%;
+    }
+
+    .dashboard-toast {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .services-intro h1 {
+        font-size: 19px;
+    }
+
+    .services-intro p {
+        font-size: 10px;
+    }
+
+    .service-card-top {
+        height: 110px;
+    }
+}

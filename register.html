@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Create your SkillConnect account">
+
+    <title>Register | SkillConnect</title>
+
+
+    <!-- =====================================================
+         AUTH CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="register.css">
+
+
+    <!-- =====================================================
+         REGISTER PAGE EXTRA CSS
+         ===================================================== -->
+
+    <style>
+
+        .password-strength {
+            margin-top: 6px;
+            display: none;
+        }
+
+        .password-strength.show {
+            display: block;
+        }
+
+        .password-strength-bar {
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #e5e7eb;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .password-strength-fill {
+            height: 100%;
+            width: 0;
+            border-radius: 10px;
+            transition: 0.25s ease;
+        }
+
+        .password-strength-text {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .terms-text {
+            font-size: 10px;
+            line-height: 1.5;
+            color: #64748b;
+        }
+
+        .terms-text a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .terms-text a:hover {
+            text-decoration: underline;
+        }
+
+        .field-error {
+            display: none;
+            color: #dc2626;
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        .field-error.show {
+            display: block;
+        }
+
+        .required {
+            color: #dc2626;
+        }
+
+        .role-description {
+            margin-top: 3px;
+            font-size: 9px;
+            color: #94a3b8;
+        }
+
+    </style>
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- =====================================================
+         AUTH CONTAINER
+         ===================================================== -->
+
+    <div class="auth-container">
+
+
+        <!-- =================================================
+             LEFT BRAND PANEL
+             ================================================= -->
+
+        <section class="auth-brand-panel">
+
+
+            <!-- Logo -->
+
+            <a href="index.html"
+               class="auth-logo">
+
+                <div class="auth-logo-mark">
+                    SC
+                </div>
+
+                <div class="auth-logo-text">
+                    Skill<span>Connect</span>
+                </div>
+
+            </a>
+
+
+            <!-- Brand Content -->
+
+            <div class="auth-brand-content">
+
+                <span class="auth-badge">
+                    Join SkillConnect
+                </span>
+
+
+                <h1>
+                    Find Skills.
+                    <br>
+                    <span>Build Connections.</span>
+                </h1>
+
+
+                <p>
+                    Create your account and connect with
+                    trusted professionals or start offering
+                    your skills to customers.
+                </p>
+
+
+                <!-- Features -->
+
+                <div class="auth-features">
+
+
+                    <div class="auth-feature">
+
+                        <div class="auth-feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Verified Professionals
+                            </strong>
+
+                            <span>
+                                Connect with trusted and
+                                skilled workers.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <div class="auth-feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Easy Booking
+                            </strong>
+
+                            <span>
+                                Book services according to
+                                your time and budget.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <div class="auth-feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Secure Platform
+                            </strong>
+
+                            <span>
+                                Your account and information
+                                stay protected.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Brand Footer -->
+
+            <div class="auth-brand-footer">
+
+                © 2026 SkillConnect. All rights reserved.
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             RIGHT FORM PANEL
+             ================================================= -->
+
+        <section class="auth-form-panel">
+
+
+            <div class="auth-form-wrapper">
+
+
+                <!-- Mobile Logo -->
+
+                <a href="index.html"
+                   class="auth-mobile-logo">
+
+                    <div class="auth-logo-mark">
+                        SC
+                    </div>
+
+                    <div class="auth-logo-text">
+                        Skill<span>Connect</span>
+                    </div>
+
+                </a>
+
+
+                <!-- Form Header -->
+
+                <div class="auth-form-header">
+
+                    <h2>
+                        Create Account
+                    </h2>
+
+                    <p>
+                        Get started with SkillConnect today.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     AUTH MESSAGE
+                     ================================================= -->
+
+                <div id="authMessage"
+                     class="auth-message"
+                     role="alert">
+                </div>
+
+
+                <!-- =================================================
+                     REGISTER FORM
+                     ================================================= -->
+
+                <form id="registerForm"
+                      class="auth-form"
+                      novalidate>
+
+
+                    <!-- =================================================
+                         FULL NAME
+                         ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="registerName">
+
+                            Full Name
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ◉
+                            </span>
+
+
+                            <input
+                                type="text"
+                                id="registerName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                maxlength="80"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field-error"
+                             id="nameError">
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         EMAIL
+                         ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+
+                            Email Address
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                @
+                            </span>
+
+
+                            <input
+                                type="email"
+                                id="registerEmail"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field-error"
+                             id="emailError">
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PHONE
+                         ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="registerPhone">
+
+                            Mobile Number
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ☎
+                            </span>
+
+
+                            <input
+                                type="tel"
+                                id="registerPhone"
+                                name="phone"
+                                placeholder="10-digit mobile number"
+                                autocomplete="tel"
+                                maxlength="10"
+                                inputmode="numeric"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field-error"
+                             id="phoneError">
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ACCOUNT TYPE
+                         ================================================= -->
+
+                    <div class="form-group">
+
+                        <label>
+
+                            I want to
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <div class="account-type-options">
+
+
+                            <!-- Customer -->
+
+                            <label class="account-type-card">
+
+
+                                <input
+                                    type="radio"
+                                    name="role"
+                                    value="customer"
+                                    id="roleCustomer"
+                                    checked
+                                >
+
+
+                                <div class="account-type-content">
+
+                                    <div class="account-type-icon">
+                                        👤
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+                                            Hire a Professional
+                                        </strong>
+
+                                        <span>
+                                            I need services
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </label>
+
+
+                            <!-- Worker -->
+
+                            <label class="account-type-card">
+
+
+                                <input
+                                    type="radio"
+                                    name="role"
+                                    value="worker"
+                                    id="roleWorker"
+                                >
+
+
+                                <div class="account-type-content">
+
+                                    <div class="account-type-icon">
+                                        🛠
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+                                            Offer My Services
+                                        </strong>
+
+                                        <span>
+                                            I am a professional
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </label>
+
+
+                        </div>
+
+
+                        <div class="role-description"
+                             id="roleDescription">
+
+                            Create a customer account to find
+                            and book professionals.
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PASSWORD
+                         ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+
+                            Password
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <div class="input-wrapper password-wrapper">
+
+                            <span class="input-icon">
+                                ●
+                            </span>
+
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="registerPassword"
+                                aria-label="Show password">
+
+                                Show
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- Password Strength -->
+
+                        <div class="password-strength"
+                             id="passwordStrength">
+
+                            <div class="password-strength-bar">
+
+                                <div
+                                    class="password-strength-fill"
+                                    id="passwordStrengthFill">
+                                </div>
+
+                            </div>
+
+
+                            <span
+                                class="password-strength-text"
+                                id="passwordStrengthText">
+
+                                Password strength
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="field-error"
+                             id="passwordError">
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CONFIRM PASSWORD
+                         ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+
+                            Confirm Password
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <div class="input-wrapper password-wrapper">
+
+                            <span class="input-icon">
+                                ●
+                            </span>
+
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="confirmPassword"
+                                aria-label="Show password">
+
+                                Show
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="field-error"
+                             id="confirmPasswordError">
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         TERMS
+                         ================================================= -->
+
+                    <div class="auth-checkbox-row">
+
+
+                        <label class="auth-checkbox">
+
+                            <input
+                                type="checkbox"
+                                id="termsCheckbox"
+                                name="terms"
+                                required
+                            >
+
+
+                            <span class="terms-text">
+
+                                I agree to the
+                                <a href="#">
+                                    Terms of Service
+                                </a>
+                                and
+                                <a href="#">
+                                    Privacy Policy
+                                </a>.
+
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         REGISTER BUTTON
+                         ================================================= -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit-btn"
+                        id="registerBtn">
+
+                        <span>
+                            Create Account
+                        </span>
+
+                        <span class="auth-submit-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- =================================================
+                     DIVIDER
+                     ================================================= -->
+
+                <div class="auth-divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                     GOOGLE BUTTON
+                     ================================================= -->
+
+                <button
+                    type="button"
+                    class="social-login-btn"
+                    id="googleRegisterBtn">
+
+                    <span class="google-icon">
+                        G
+                    </span>
+
+                    Continue with Google
+
+                </button>
+
+
+                <!-- =================================================
+                     LOGIN LINK
+                     ================================================= -->
+
+                <div class="auth-switch">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </div>
+
+
+                <!-- Security Note -->
+
+                <div class="auth-security-note">
+
+                    🔒 Your information is protected with
+                    secure authentication.
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         REGISTER JAVASCRIPT
+         ===================================================== -->
+
+    <script type="module"
+            src="auth.js"></script>
+
+
+    <!-- =====================================================
+         REGISTER PAGE EXTRA JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =============================================
+                   ROLE DESCRIPTION
+                   ============================================= */
+
+                const roleCustomer =
+                    document.getElementById(
+                        "roleCustomer"
+                    );
+
+                const roleWorker =
+                    document.getElementById(
+                        "roleWorker"
+                    );
+
+                const roleDescription =
+                    document.getElementById(
+                        "roleDescription"
+                    );
+
+
+                function updateRoleDescription() {
+
+                    if (
+                        roleWorker &&
+                        roleWorker.checked
+                    ) {
+
+                        roleDescription.textContent =
+                            "Create a professional account to offer your skills and receive job requests.";
+
+                    } else {
+
+                        roleDescription.textContent =
+                            "Create a customer account to find and book professionals.";
+
+                    }
+
+                }
+
+
+                if (roleCustomer) {
+
+                    roleCustomer.addEventListener(
+                        "change",
+                        updateRoleDescription
+                    );
+
+                }
+
+
+                if (roleWorker) {
+
+                    roleWorker.addEventListener(
+                        "change",
+                        updateRoleDescription
+                    );
+
+                }
+
+
+                /* =============================================
+                   PASSWORD STRENGTH
+                   ============================================= */
+
+                const passwordInput =
+                    document.getElementById(
+                        "registerPassword"
+                    );
+
+                const strengthContainer =
+                    document.getElementById(
+                        "passwordStrength"
+                    );
+
+                const strengthFill =
+                    document.getElementById(
+                        "passwordStrengthFill"
+                    );
+
+                const strengthText =
+                    document.getElementById(
+                        "passwordStrengthText"
+                    );
+
+
+                if (
+                    passwordInput &&
+                    strengthContainer &&
+                    strengthFill &&
+                    strengthText
+                ) {
+
+                    passwordInput.addEventListener(
+                        "input",
+                        function () {
+
+                            const password =
+                                passwordInput.value;
+
+
+                            if (!password) {
+
+                                strengthContainer.classList.remove(
+                                    "show"
+                                );
+
+                                return;
+
+                            }
+
+
+                            strengthContainer.classList.add(
+                                "show"
+                            );
+
+
+                            let score = 0;
+
+
+                            if (
+                                password.length >= 6
+                            ) {
+                                score++;
+                            }
+
+
+                            if (
+                                password.length >= 10
+                            ) {
+                                score++;
+                            }
+
+
+                            if (
+                                /[A-Z]/.test(password)
+                            ) {
+                                score++;
+                            }
+
+
+                            if (
+                                /[0-9]/.test(password)
+                            ) {
+                                score++;
+                            }
+
+
+                            if (
+                                /[^A-Za-z0-9]/.test(password)
+                            ) {
+                                score++;
+                            }
+
+
+                            let width =
+                                "20%";
+
+                            let text =
+                                "Very Weak";
+
+
+                            if (score === 2) {
+
+                                width = "40%";
+                                text = "Weak";
+
+                            } else if (score === 3) {
+
+                                width = "60%";
+                                text = "Medium";
+
+                            } else if (score === 4) {
+
+                                width = "80%";
+                                text = "Strong";
+
+                            } else if (score >= 5) {
+
+                                width = "100%";
+                                text = "Very Strong";
+
+                            }
+
+
+                            strengthFill.style.width =
+                                width;
+
+
+                            strengthText.textContent =
+                                text;
+
+                        }
+                    );
+
+                }
+
+
+                /* =============================================
+                   PHONE NUMBER
+                   ============================================= */
+
+                const phoneInput =
+                    document.getElementById(
+                        "registerPhone"
+                    );
+
+
+                if (phoneInput) {
+
+                    phoneInput.addEventListener(
+                        "input",
+                        function () {
+
+                            this.value =
+                                this.value
+                                    .replace(/\D/g, "")
+                                    .slice(0, 10);
+
+                        }
+                    );
+
+                }
+
+
+                /* =============================================
+                   GOOGLE BUTTON
+                   ============================================= */
+
+                const googleButton =
+                    document.getElementById(
+                        "googleRegisterBtn"
+                    );
+
+
+                if (googleButton) {
+
+                    googleButton.addEventListener(
+                        "click",
+                        function () {
+
+                            const message =
+                                document.getElementById(
+                                    "authMessage"
+                                );
+
+
+                            if (message) {
+
+                                message.className =
+                                    "auth-message error";
+
+                                message.textContent =
+                                    "Google registration will be enabled after Google Authentication is configured in Firebase.";
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Service Details | SkillConnect">
+
+    <title>Service Details | SkillConnect</title>
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="service-details.css">
+
+    <!-- RESPONSIVE CSS -->
+
+    <link rel="stylesheet" href="responsive.css">
+
+
+
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- =====================================================
+         DASHBOARD LAYOUT
+         ===================================================== -->
+
+    <div class="dashboard-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="dashboard-sidebar"
+               id="dashboardSidebar">
+
+
+            <!-- Brand -->
+
+            <div class="sidebar-brand">
+
+                <a href="index.html">
+
+                    <div class="sidebar-logo">
+                        SC
+                    </div>
+
+                    <div class="sidebar-brand-name">
+                        Skill<span>Connect</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Customer -->
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar"
+                     id="sidebarCustomerAvatar">
+                    RK
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <h4 id="sidebarCustomerName">
+                        Rahul Kumar
+                    </h4>
+
+                    <p>
+                        Customer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="sidebar-nav-title">
+                    Main Menu
+                </p>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a href="coustomer-dashboard.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ⌂
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Dashboard
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="services.html"
+                           class="sidebar-nav-link active">
+
+                            <span class="sidebar-nav-icon">
+                                ▦
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Services
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="my-bookings.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▣
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Bookings
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="bookingCountBadge">
+                                0
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="post-job.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ＋
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Post a Job
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="notifications.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ♢
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Notifications
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <p class="sidebar-nav-title"
+                   style="margin-top: 25px;">
+
+                    Account
+
+                </p>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a href="coustomer-profile.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ◉
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Profile
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="payments.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ₹
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Payments
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="reviews.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ★
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Reviews & Ratings
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-logout"
+                        id="logoutBtn">
+
+                    <span>
+                        ⇥
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================================
+                 HEADER
+                 ================================================= -->
+
+            <header class="dashboard-header">
+
+
+                <div class="dashboard-header-left">
+
+
+                    <button class="mobile-menu-btn"
+                            id="mobileMenuBtn">
+
+                        ☰
+
+                    </button>
+
+
+                    <div class="dashboard-header-title">
+
+                        <h2>
+                            Service Details
+                        </h2>
+
+                        <p>
+                            Explore service and professionals
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-header-right">
+
+
+                    <button class="header-icon-btn"
+                            onclick="window.location.href='notifications.html'">
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <div class="header-user">
+
+                        <div class="header-avatar"
+                             id="headerAvatar">
+                            RK
+                        </div>
+
+                        <div class="header-user-info">
+
+                            <strong id="headerName">
+                                Rahul Kumar
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 CONTENT
+                 ================================================= -->
+
+            <div class="dashboard-content">
+
+
+                <div class="service-details-page">
+
+
+                    <!-- =================================================
+                         BREADCRUMB
+                         ================================================= -->
+
+                    <div class="service-breadcrumb">
+
+                        <a href="customer-dashboard.html">
+                            Dashboard
+                        </a>
+
+                        <span class="breadcrumb-arrow">
+                            /
+                        </span>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <span class="breadcrumb-arrow">
+                            /
+                        </span>
+
+                        <span id="breadcrumbService">
+                            Bathroom Cleaning
+                        </span>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         HERO
+                         ================================================= -->
+
+                    <div class="service-hero">
+
+
+                        <!-- Hero -->
+
+                        <section class="service-hero-main">
+
+
+                            <div class="service-hero-decoration">
+                            </div>
+
+                            <div class="service-hero-decoration-two">
+                            </div>
+
+
+                            <div class="service-hero-content">
+
+
+                                <div class="service-icon-large"
+                                     id="serviceIcon">
+                                    🧹
+                                </div>
+
+
+                                <span class="service-category-badge"
+                                      id="serviceCategory">
+                                    Home Cleaning
+                                </span>
+
+
+                                <h1 id="serviceTitle">
+                                    Bathroom Cleaning
+                                </h1>
+
+
+                                <p id="serviceDescriptionShort">
+
+                                    Professional bathroom cleaning
+                                    service with trained workers,
+                                    quality cleaning products and
+                                    hygienic service.
+
+                                </p>
+
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- Price -->
+
+                        <aside class="service-price-card">
+
+
+                            <h3>
+                                Starting Price
+                            </h3>
+
+
+                            <div class="service-price">
+
+                                <strong id="servicePrice">
+                                    ₹399
+                                </strong>
+
+                                <span>
+                                    / service
+                                </span>
+
+                            </div>
+
+
+                            <p class="service-price-note">
+                                Final price may vary based on
+                                service requirements.
+                            </p>
+
+
+                            <div class="service-rating-row">
+
+
+                                <span class="service-rating-stars"
+                                      id="serviceRatingStars">
+                                    ★★★★★
+                                </span>
+
+
+                                <strong id="serviceRating">
+                                    4.8
+                                </strong>
+
+
+                                <span>
+                                    (<span id="serviceReviewCount">24</span>
+                                    reviews)
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="service-book-btn"
+                                id="bookServiceBtn">
+
+                                Book This Service
+
+                            </button>
+
+
+                            <button
+                                class="service-post-job-btn"
+                                id="postJobFromServiceBtn">
+
+                                Post a Custom Job
+
+                            </button>
+
+
+                            <div class="service-trust-list">
+
+
+                                <div class="service-trust-item">
+
+                                    <span class="service-trust-item-icon">
+                                        ✓
+                                    </span>
+
+                                    Verified Professionals
+
+                                </div>
+
+
+                                <div class="service-trust-item">
+
+                                    <span class="service-trust-item-icon">
+                                        ✓
+                                    </span>
+
+                                    Secure Booking
+
+                                </div>
+
+
+                                <div class="service-trust-item">
+
+                                    <span class="service-trust-item-icon">
+                                        ✓
+                                    </span>
+
+                                    Transparent Pricing
+
+                                </div>
+
+
+                            </div>
+
+                        </aside>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         MAIN GRID
+                         ================================================= -->
+
+                    <div class="service-main-grid">
+
+
+                        <!-- =================================================
+                             LEFT
+                             ================================================= -->
+
+                        <div>
+
+
+                            <!-- About Service -->
+
+                            <section class="service-content-card">
+
+
+                                <div class="service-card-header">
+
+                                    <h2>
+                                        About This Service
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="service-card-body">
+
+                                    <p class="service-description"
+                                       id="serviceDescription">
+
+                                        Our professional bathroom
+                                        cleaning service is designed
+                                        to provide deep and hygienic
+                                        cleaning for your bathroom.
+                                        Skilled professionals clean
+                                        floors, tiles, wash basin,
+                                        toilet area and other surfaces
+                                        using suitable cleaning
+                                        products.
+
+                                    </p>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- Features -->
+
+                            <section class="service-content-card">
+
+
+                                <div class="service-card-header">
+
+                                    <h2>
+                                        What's Included
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="service-card-body">
+
+
+                                    <div class="service-features">
+
+
+                                        <div class="service-feature">
+
+                                            <div class="service-feature-icon">
+                                                ✓
+                                            </div>
+
+                                            <div>
+
+                                                <h4>
+                                                    Floor Cleaning
+                                                </h4>
+
+                                                <p>
+                                                    Deep cleaning of
+                                                    bathroom floor.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="service-feature">
+
+                                            <div class="service-feature-icon">
+                                                ✓
+                                            </div>
+
+                                            <div>
+
+                                                <h4>
+                                                    Tile Cleaning
+                                                </h4>
+
+                                                <p>
+                                                    Cleaning of bathroom
+                                                    wall tiles.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="service-feature">
+
+                                            <div class="service-feature-icon">
+                                                ✓
+                                            </div>
+
+                                            <div>
+
+                                                <h4>
+                                                    Toilet Cleaning
+                                                </h4>
+
+                                                <p>
+                                                    Hygienic toilet area
+                                                    cleaning.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="service-feature">
+
+                                            <div class="service-feature-icon">
+                                                ✓
+                                            </div>
+
+                                            <div>
+
+                                                <h4>
+                                                    Wash Basin
+                                                </h4>
+
+                                                <p>
+                                                    Cleaning of basin
+                                                    and surrounding area.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- Process -->
+
+                            <section class="service-content-card">
+
+
+                                <div class="service-card-header">
+
+                                    <h2>
+                                        How It Works
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="service-card-body">
+
+
+                                    <div class="service-process">
+
+
+                                        <div class="process-step">
+
+                                            <div class="process-number">
+                                                1
+                                            </div>
+
+                                            <h4>
+                                                Choose Service
+                                            </h4>
+
+                                            <p>
+                                                Select your required
+                                                service.
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="process-step">
+
+                                            <div class="process-number">
+                                                2
+                                            </div>
+
+                                            <h4>
+                                                Select Professional
+                                            </h4>
+
+                                            <p>
+                                                Compare nearby workers.
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="process-step">
+
+                                            <div class="process-number">
+                                                3
+                                            </div>
+
+                                            <h4>
+                                                Book
+                                            </h4>
+
+                                            <p>
+                                                Select date and time.
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="process-step">
+
+                                            <div class="process-number">
+                                                4
+                                            </div>
+
+                                            <h4>
+                                                Get Service
+                                            </h4>
+
+                                            <p>
+                                                Professional completes
+                                                your job.
+                                            </p>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- Professionals -->
+
+                            <section class="service-content-card">
+
+
+                                <div class="service-card-header">
+
+                                    <h2>
+                                        Available Professionals
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="professional-list"
+                                     id="professionalList">
+
+
+                                    <!-- Professional 1 -->
+
+                                    <div class="professional-item">
+
+
+                                        <div class="professional-avatar">
+                                            AS
+                                        </div>
+
+
+                                        <div class="professional-info">
+
+                                            <h4>
+                                                Aman Sharma
+                                            </h4>
+
+                                            <p>
+                                                Home Cleaning Specialist
+                                            </p>
+
+
+                                            <div class="professional-meta">
+
+                                                <span class="professional-rating">
+                                                    ★ 4.9
+                                                </span>
+
+                                                <span class="professional-experience">
+                                                    5 years experience
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="professional-price">
+
+                                            <strong>
+                                                ₹450
+                                            </strong>
+
+                                            <span>
+                                                starting
+                                            </span>
+
+
+                                            <br>
+
+
+                                            <button
+                                                class="professional-view-btn"
+                                                onclick="window.location.href='worker-profile.html?id=aman-sharma'">
+
+                                                View Profile →
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Professional 2 -->
+
+                                    <div class="professional-item">
+
+
+                                        <div class="professional-avatar">
+                                            RK
+                                        </div>
+
+
+                                        <div class="professional-info">
+
+                                            <h4>
+                                                Raj Kumar
+                                            </h4>
+
+                                            <p>
+                                                Cleaning Professional
+                                            </p>
+
+
+                                            <div class="professional-meta">
+
+                                                <span class="professional-rating">
+                                                    ★ 4.8
+                                                </span>
+
+                                                <span class="professional-experience">
+                                                    4 years experience
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="professional-price">
+
+                                            <strong>
+                                                ₹400
+                                            </strong>
+
+                                            <span>
+                                                starting
+                                            </span>
+
+
+                                            <br>
+
+
+                                            <button
+                                                class="professional-view-btn"
+                                                onclick="window.location.href='worker-profile.html?id=raj-kumar'">
+
+                                                View Profile →
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Professional 3 -->
+
+                                    <div class="professional-item">
+
+
+                                        <div class="professional-avatar">
+                                            VS
+                                        </div>
+
+
+                                        <div class="professional-info">
+
+                                            <h4>
+                                                Vikash Singh
+                                            </h4>
+
+                                            <p>
+                                                Deep Cleaning Expert
+                                            </p>
+
+
+                                            <div class="professional-meta">
+
+                                                <span class="professional-rating">
+                                                    ★ 4.7
+                                                </span>
+
+                                                <span class="professional-experience">
+                                                    3 years experience
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="professional-price">
+
+                                            <strong>
+                                                ₹399
+                                            </strong>
+
+                                            <span>
+                                                starting
+                                            </span>
+
+
+                                            <br>
+
+
+                                            <button
+                                                class="professional-view-btn"
+                                                onclick="window.location.href='worker-profile.html?id=vikash-singh'">
+
+                                                View Profile →
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- Reviews -->
+
+                            <section class="service-content-card">
+
+
+                                <div class="service-card-header">
+
+                                    <h2>
+                                        Customer Reviews
+                                    </h2>
+
+                                </div>
+
+
+                                <div id="serviceReviews">
+
+
+                                    <article class="service-review">
+
+
+                                        <div class="service-review-header">
+
+
+                                            <div class="service-review-user">
+
+                                                <div class="service-review-avatar">
+                                                    RK
+                                                </div>
+
+
+                                                <div>
+
+                                                    <strong>
+                                                        Rahul Kumar
+                                                    </strong>
+
+                                                    <span>
+                                                        25 Sep 2026
+                                                    </span>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="service-review-rating">
+                                                ★★★★★
+                                            </div>
+
+                                        </div>
+
+
+                                        <p>
+                                            Very good service. The
+                                            professional arrived on time
+                                            and completed the cleaning
+                                            properly.
+                                        </p>
+
+                                    </article>
+
+
+                                    <article class="service-review">
+
+
+                                        <div class="service-review-header">
+
+
+                                            <div class="service-review-user">
+
+                                                <div class="service-review-avatar">
+                                                    PS
+                                                </div>
+
+
+                                                <div>
+
+                                                    <strong>
+                                                        Priya Singh
+                                                    </strong>
+
+                                                    <span>
+                                                        18 Sep 2026
+                                                    </span>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="service-review-rating">
+                                                ★★★★☆
+                                            </div>
+
+                                        </div>
+
+
+                                        <p>
+                                            Good experience and
+                                            professional behaviour.
+                                        </p>
+
+                                    </article>
+
+
+                                </div>
+
+                            </section>
+
+
+                        </div>
+
+
+                        <!-- =================================================
+                             RIGHT SIDEBAR
+                             ================================================= -->
+
+                        <aside>
+
+
+                            <!-- Quick Information -->
+
+                            <div class="service-side-card">
+
+
+                                <div class="service-side-header">
+
+                                    <h3>
+                                        Service Information
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="service-side-body">
+
+
+                                    <div class="quick-info-item">
+
+                                        <span class="quick-info-label">
+                                            Category
+                                        </span>
+
+                                        <span
+                                            class="quick-info-value"
+                                            id="quickCategory">
+
+                                            Home Cleaning
+
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="quick-info-item">
+
+                                        <span class="quick-info-label">
+                                            Duration
+                                        </span>
+
+                                        <span
+                                            class="quick-info-value">
+
+                                            2 - 3 Hours
+
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="quick-info-item">
+
+                                        <span class="quick-info-label">
+                                            Availability
+                                        </span>
+
+                                        <span
+                                            class="quick-info-value">
+
+                                            All Days
+
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="quick-info-item">
+
+                                        <span class="quick-info-label">
+                                            Location
+                                        </span>
+
+                                        <span
+                                            class="quick-info-value">
+
+                                            Kanpur
+
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="quick-info-item">
+
+                                        <span class="quick-info-label">
+                                            Professionals
+                                        </span>
+
+                                        <span
+                                            class="quick-info-value"
+                                            id="professionalCount">
+
+                                            12+
+
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Safety -->
+
+                            <div class="service-side-card">
+
+
+                                <div class="service-side-body">
+
+
+                                    <div class="safety-box">
+
+                                        <h4>
+                                            🛡 Safe & Trusted
+                                        </h4>
+
+                                        <p>
+                                            SkillConnect verifies
+                                            professionals and provides
+                                            secure booking for customers.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FAQ -->
+
+                            <div class="service-side-card">
+
+
+                                <div class="service-side-header">
+
+                                    <h3>
+                                        Frequently Asked Questions
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="service-side-body">
+
+
+                                    <div class="faq-item">
+
+
+                                        <button
+                                            type="button"
+                                            class="faq-question">
+
+                                            Is cleaning material included?
+
+                                            <span class="faq-arrow">
+                                                ▼
+                                            </span>
+
+                                        </button>
+
+
+                                        <div class="faq-answer">
+
+                                            Basic cleaning materials are
+                                            generally included. Additional
+                                            special materials may cost extra.
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="faq-item">
+
+
+                                        <button
+                                            type="button"
+                                            class="faq-question">
+
+                                            How long does the service take?
+
+                                            <span class="faq-arrow">
+                                                ▼
+                                            </span>
+
+                                        </button>
+
+
+                                        <div class="faq-answer">
+
+                                            Most bathroom cleaning services
+                                            take around 2 to 3 hours depending
+                                            on the size and condition.
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="faq-item">
+
+
+                                        <button
+                                            type="button"
+                                            class="faq-question">
+
+                                            Can I choose a professional?
+
+                                            <span class="faq-arrow">
+                                                ▼
+                                            </span>
+
+                                        </button>
+
+
+                                        <div class="faq-answer">
+
+                                            Yes. You can view available
+                                            professionals and select the
+                                            professional you prefer.
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="faq-item">
+
+
+                                        <button
+                                            type="button"
+                                            class="faq-question">
+
+                                            Can I cancel my booking?
+
+                                            <span class="faq-arrow">
+                                                ▼
+                                            </span>
+
+                                        </button>
+
+
+                                        <div class="faq-answer">
+
+                                            Cancellation depends on the
+                                            booking status and SkillConnect
+                                            cancellation policy.
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </aside>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div class="dashboard-toast"
+         id="dashboardToast">
+    </div>
+
+
+    <!-- =====================================================
+         SERVICE DETAILS JAVASCRIPT
+         ===================================================== -->
+
+    <script type="module"
+            src="services.js"></script>
+
+
+</body>
+
+</html>

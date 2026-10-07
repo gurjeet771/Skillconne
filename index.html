@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillConnect</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            Skill<span>Connect</span>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#services">Service</a>
+            <a href="#how">How It Works</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button class="login-btn">Login</button>
+            <button class="register-btn">Register</button>
+        </div>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                FIND SKILLED PEOPLE NEAR YOU
+            </p>
+
+            <h1>
+                Find the Right Person<br>
+                <span>For Every Job</span>
+            </h1>
+
+            <p class="hero-text">
+                Hire trusted workers and professionals for your
+                everyday needs. From plumbers and electricians to
+                developers, teachers and digital marketers.
+            </p>
+
+            <!-- Search Box -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="serviceSearch"
+                    placeholder="What service do you need?"
+                >
+
+                <input
+                    type="text"
+                    placeholder="Enter your location"
+                >
+
+                <button onclick="searchService()">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popular Services -->
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <p>POPULAR SERVICES</p>
+
+            <h2>
+                What service do you need?
+            </h2>
+
+        </div>
+
+
+        <div class="service-container">
+
+            <div class="service-card"
+                 onclick="selectService('Carpenter')">
+
+                <div class="service-icon">🔨</div>
+
+                <h3>Carpenter</h3>
+
+                <p>
+                    Furniture & wood work
+                </p>
+
+            </div>
+
+
+            <div class="service-card"
+                 onclick="selectService('Plumber')">
+
+                <div class="service-icon">🔧</div>
+
+                <h3>Plumber</h3>
+
+                <p>
+                    Plumbing & pipe repair
+                </p>
+
+            </div>
+
+
+            <div class="service-card"
+                 onclick="selectService('Electrician')">
+
+                <div class="service-icon">⚡</div>
+
+                <h3>Electrician</h3>
+
+                <p>
+                    Electrical services
+                </p>
+
+            </div>
+
+
+            <div class="service-card"
+                 onclick="selectService('Cleaning')">
+
+                <div class="service-icon">🧹</div>
+
+                <h3>Cleaning</h3>
+
+                <p>
+                    Home & bathroom cleaning
+                </p>
+
+            </div>
+
+
+            <div class="service-card"
+                 onclick="selectService('Cook')">
+
+                <div class="service-icon">🍳</div>
+
+                <h3>Cook</h3>
+
+                <p>
+                    Home cooking services
+                </p>
+
+            </div>
+
+
+            <div class="service-card"
+                 onclick="selectService('Teacher')">
+
+                <div class="service-icon">👨‍🏫</div>
+
+                <h3>Teacher</h3>
+
+                <p>
+                    Home & online tutoring
+                </p>
+
+            </div>
+
+
+            <div class="service-card"
+                 onclick="selectService('Mechanic')">
+
+                <div class="service-icon">🚗</div>
+
+                <h3>Mechanic</h3>
+
+                <p>
+                    Car & bike repair
+                </p>
+
+            </div>
+
+
+            <div class="service-card"
+                 onclick="selectService('Website Developer')">
+
+                <div class="service-icon">💻</div>
+
+                <h3>Website Developer</h3>
+
+                <p>
+                    Websites & applications
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+    <section class="how" id="how">
+
+        <div class="section-title">
+
+            <p>HOW IT WORKS</p>
+
+            <h2>
+                Get your work done in 3 simple steps
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>Search</h3>
+
+                <p>
+                    Search for the service you need
+                    and choose your location.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>Choose</h3>
+
+                <p>
+                    Compare workers by rating,
+                    experience and price.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>Book</h3>
+
+                <p>
+                    Book the professional and
+                    get your work completed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div>
+
+            <p class="small-heading">
+                ABOUT SKILLCONNECT
+            </p>
+
+            <h2>
+                One platform for every skill.
+            </h2>
+
+            <p>
+                SkillConnect connects customers with trusted
+                skilled workers and professionals. Whether you
+                need a plumber, cleaner, teacher, mechanic,
+                developer or digital marketer, you can find
+                the right person for your work.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Skill<span>Connect</span>
+        </div>
+
+        <p>
+            Connecting skills with opportunities.
+        </p>
+
+        <p class="copyright">
+            © 2026 SkillConnect. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="SkillConnect Customer Dashboard - find and book trusted professionals."
+    >
+
+    <title>Customer Dashboard | SkillConnect</title>
+
+
+    <!-- Dashboard CSS -->
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="coustomer-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="dashboard-sidebar"
+        id="dashboardSidebar"
+    >
+
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    S
+                </span>
+
+                <span class="logo-text">
+                    Skill<span>Connect</span>
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- Customer Profile -->
+
+        <div class="sidebar-profile">
+
+            <div class="sidebar-avatar">
+                C
+            </div>
+
+            <div class="sidebar-user-info">
+
+                <strong id="sidebarCustomerName">
+                    Customer
+                </strong>
+
+                <span>
+                    Customer Account
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="sidebar-nav">
+
+
+            <p class="nav-title">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="coustomer-dashboard.html"
+                class="sidebar-link active"
+                data-section="dashboard"
+            >
+
+                <span class="sidebar-icon">
+                    🏠
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="services.html"
+                class="sidebar-link"
+            >
+
+                <span class="sidebar-icon">
+                    🔧
+                </span>
+
+                <span>
+                    Find Services
+                </span>
+
+            </a>
+
+
+            <a
+                href="my-bookings.html"
+                class="sidebar-link"
+            >
+
+                <span class="sidebar-icon">
+                    📅
+                </span>
+
+                <span>
+                    My Bookings
+                </span>
+
+                <span
+                    class="sidebar-badge"
+                    id="bookingCountBadge"
+                >
+                    2
+                </span>
+
+            </a>
+
+
+            <a
+                href="post-job.html"
+                class="sidebar-link"
+            >
+
+                <span class="sidebar-icon">
+                    ➕
+                </span>
+
+                <span>
+                    Post a Job
+                </span>
+
+            </a>
+
+
+
+            <p class="nav-title">
+                ACCOUNT
+            </p>
+
+
+            <a
+                href="coustomer-profile.html"
+                class="sidebar-link"
+            >
+
+                <span class="sidebar-icon">
+                    👤
+                </span>
+
+                <span>
+                    My Profile
+                </span>
+
+            </a>
+
+
+            <a
+                href="notifications.html"
+                class="sidebar-link"
+            >
+
+                <span class="sidebar-icon">
+                    🔔
+                </span>
+
+                <span>
+                    Notifications
+                </span>
+
+                <span class="sidebar-badge notification-badge">
+                    2
+                </span>
+
+            </a>
+
+
+            <a
+                href="payments.html"
+                class="sidebar-link"
+            >
+
+                <span class="sidebar-icon">
+                    💳
+                </span>
+
+                <span>
+                    Payments
+                </span>
+
+            </a>
+
+
+            <p class="nav-title">
+                SUPPORT
+            </p>
+
+
+            <a
+                href="#"
+                class="sidebar-link"
+                onclick="contactSupport(event)"
+            >
+
+                <span class="sidebar-icon">
+                    ❓
+                </span>
+
+                <span>
+                    Help & Support
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="index.html"
+                class="sidebar-link"
+            >
+
+                <span class="sidebar-icon">
+                    🌐
+                </span>
+
+                <span>
+                    Visit Website
+                </span>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="sidebar-logout"
+                id="logoutBtn"
+            >
+
+                <span>
+                    🚪
+                </span>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="dashboard-header">
+
+
+            <div class="header-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <p class="header-small-text">
+                        CUSTOMER DASHBOARD
+                    </p>
+
+                    <h1>
+                        Welcome back,
+                        <span id="headerCustomerName">
+                            Customer
+                        </span>! 👋
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="header-right">
+
+
+                <!-- Search -->
+
+                <div class="dashboard-search">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <input
+                        type="search"
+                        id="dashboardSearch"
+                        placeholder="Search services..."
+                    >
+
+                </div>
+
+
+                <!-- Notification -->
+
+                <a
+                    href="notifications.html"
+                    class="header-notification"
+                    title="Notifications"
+                >
+
+                    🔔
+
+                    <span>
+                        2
+                    </span>
+
+                </a>
+
+
+                <!-- Profile -->
+
+                <a
+                    href="coustomer-profile.html"
+                    class="header-profile"
+                >
+
+                    <div class="header-profile-avatar">
+                        C
+                    </div>
+
+                    <div class="header-profile-info">
+
+                        <strong id="headerProfileName">
+                            Customer
+                        </strong>
+
+                        <small>
+                            Customer
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- =============================================
+                 WELCOME BANNER
+            ============================================== -->
+
+            <section class="welcome-banner">
+
+
+                <div class="welcome-content">
+
+                    <span class="welcome-label">
+                        SKILLCONNECT
+                    </span>
+
+                    <h2>
+                        What service do you need today?
+                    </h2>
+
+                    <p>
+                        Find trusted professionals near you
+                        and book the service you need.
+                    </p>
+
+
+                    <!-- Search Services -->
+
+                    <div class="welcome-search">
+
+                        <span>
+                            🔍
+                        </span>
+
+                        <input
+                            type="text"
+                            id="serviceSearch"
+                            placeholder="What service are you looking for?"
+                        >
+
+                        <button
+                            type="button"
+                            onclick="searchService()"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="welcome-illustration">
+
+                    <div class="illustration-circle">
+
+                        <span>
+                            🛠️
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 STAT CARDS
+            ============================================== -->
+
+            <section class="dashboard-stats">
+
+
+                <!-- Total Bookings -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        📅
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Bookings
+                        </span>
+
+                        <strong id="totalBookings">
+                            0
+                        </strong>
+
+                        <small>
+                            All your bookings
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Active Bookings -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ⏳
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Active Bookings
+                        </span>
+
+                        <strong id="activeBookings">
+                            0
+                        </strong>
+
+                        <small>
+                            Currently active
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Completed -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Completed
+                        </span>
+
+                        <strong id="completedBookings">
+                            0
+                        </strong>
+
+                        <small>
+                            Services completed
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Total Spent -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ₹
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Spent
+                        </span>
+
+                        <strong id="totalSpent">
+                            ₹0
+                        </strong>
+
+                        <small>
+                            On SkillConnect
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 QUICK SERVICES
+            ============================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            EXPLORE
+                        </span>
+
+                        <h2>
+                            Popular Services
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="services.html"
+                        class="view-all-link"
+                    >
+                        View All →
+                    </a>
+
+                </div>
+
+
+
+                <div class="service-grid">
+
+
+                    <!-- Cleaning -->
+
+                    <a
+                        href="services.html?service=cleaning"
+                        class="service-dashboard-card"
+                    >
+
+                        <div class="service-card-icon">
+                            🧹
+                        </div>
+
+                        <h3>
+                            Cleaning
+                        </h3>
+
+                        <p>
+                            Home & bathroom cleaning
+                        </p>
+
+                    </a>
+
+
+                    <!-- Plumbing -->
+
+                    <a
+                        href="services.html?service=plumbing"
+                        class="service-dashboard-card"
+                    >
+
+                        <div class="service-card-icon">
+                            🔧
+                        </div>
+
+                        <h3>
+                            Plumbing
+                        </h3>
+
+                        <p>
+                            Repair & installation
+                        </p>
+
+                    </a>
+
+
+                    <!-- Electrician -->
+
+                    <a
+                        href="services.html?service=electrician"
+                        class="service-dashboard-card"
+                    >
+
+                        <div class="service-card-icon">
+                            ⚡
+                        </div>
+
+                        <h3>
+                            Electrician
+                        </h3>
+
+                        <p>
+                            Electrical repair
+                        </p>
+
+                    </a>
+
+
+                    <!-- AC Repair -->
+
+                    <a
+                        href="services.html?service=ac-repair"
+                        class="service-dashboard-card"
+                    >
+
+                        <div class="service-card-icon">
+                            ❄️
+                        </div>
+
+                        <h3>
+                            AC Repair
+                        </h3>
+
+                        <p>
+                            AC service & repair
+                        </p>
+
+                    </a>
+
+
+                    <!-- Carpenter -->
+
+                    <a
+                        href="services.html?service=carpenter"
+                        class="service-dashboard-card"
+                    >
+
+                        <div class="service-card-icon">
+                            🪚
+                        </div>
+
+                        <h3>
+                            Carpenter
+                        </h3>
+
+                        <p>
+                            Furniture & woodwork
+                        </p>
+
+                    </a>
+
+
+                    <!-- Painting -->
+
+                    <a
+                        href="services.html?service=painting"
+                        class="service-dashboard-card"
+                    >
+
+                        <div class="service-card-icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            Painting
+                        </h3>
+
+                        <p>
+                            Home painting services
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 MAIN GRID
+            ============================================== -->
+
+            <div class="dashboard-two-column">
+
+
+                <!-- =========================================
+                     RECENT BOOKINGS
+                ========================================== -->
+
+                <section class="dashboard-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                BOOKINGS
+                            </span>
+
+                            <h2>
+                                Recent Bookings
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="my-bookings.html"
+                            class="view-all-link"
+                        >
+                            View All
+                        </a>
+
+                    </div>
+
+
+
+                    <div
+                        class="recent-bookings"
+                        id="recentBookings"
+                    >
+
+
+                        <!-- Booking 1 -->
+
+                        <div class="dashboard-booking-item">
+
+
+                            <div class="booking-item-icon">
+                                🧹
+                            </div>
+
+
+                            <div class="booking-item-info">
+
+                                <h3>
+                                    Bathroom Cleaning
+                                </h3>
+
+                                <p>
+                                    Rahul Kumar
+                                </p>
+
+                                <span>
+                                    25 Sep 2026 • 11:00 AM
+                                </span>
+
+                            </div>
+
+
+                            <div class="booking-item-right">
+
+                                <strong>
+                                    ₹400
+                                </strong>
+
+                                <span class="status-badge status-accepted">
+                                    Accepted
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Booking 2 -->
+
+                        <div class="dashboard-booking-item">
+
+
+                            <div class="booking-item-icon">
+                                ⚡
+                            </div>
+
+
+                            <div class="booking-item-info">
+
+                                <h3>
+                                    Electrical Repair
+                                </h3>
+
+                                <p>
+                                    Amit Sharma
+                                </p>
+
+                                <span>
+                                    22 Sep 2026 • 03:00 PM
+                                </span>
+
+                            </div>
+
+
+                            <div class="booking-item-right">
+
+                                <strong>
+                                    ₹350
+                                </strong>
+
+                                <span class="status-badge status-completed">
+                                    Completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- No bookings message -->
+
+                        <div
+                            class="dashboard-empty-state"
+                            id="noBookingsMessage"
+                            style="display:none;"
+                        >
+
+                            <div>
+                                📅
+                            </div>
+
+                            <h3>
+                                No bookings yet
+                            </h3>
+
+                            <p>
+                                Book your first service today.
+                            </p>
+
+                            <a
+                                href="services.html"
+                                class="primary-btn"
+                            >
+                                Find Services
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================================
+                     UPCOMING SERVICE
+                ========================================== -->
+
+                <section class="dashboard-panel upcoming-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                UPCOMING
+                            </span>
+
+                            <h2>
+                                Next Service
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="upcoming-service"
+                        id="upcomingService"
+                    >
+
+
+                        <div class="upcoming-service-top">
+
+                            <div class="upcoming-icon">
+                                🧹
+                            </div>
+
+                            <span class="status-badge status-accepted">
+                                Accepted
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Bathroom Cleaning
+                        </h3>
+
+
+                        <div class="upcoming-detail">
+
+                            <span>
+                                📅
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Date & Time
+                                </small>
+
+                                <strong>
+                                    25 Sep 2026
+                                    •
+                                    11:00 AM
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="upcoming-detail">
+
+                            <span>
+                                📍
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Location
+                                </small>
+
+                                <strong>
+                                    Kanpur, Uttar Pradesh
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="upcoming-detail">
+
+                            <span>
+                                👤
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Professional
+                                </small>
+
+                                <strong>
+                                    Rahul Kumar
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="booking-details.html"
+                            class="primary-btn full-width"
+                        >
+                            View Booking
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 POST A JOB CTA
+            ============================================== -->
+
+            <section class="post-job-banner">
+
+
+                <div class="post-job-icon">
+                    💼
+                </div>
+
+
+                <div class="post-job-content">
+
+                    <span>
+                        CAN'T FIND WHAT YOU NEED?
+                    </span>
+
+                    <h2>
+                        Post a Job & Let Professionals Contact You
+                    </h2>
+
+                    <p>
+                        Tell us what you need, set your budget,
+                        and receive offers from nearby professionals.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="post-job.html"
+                    class="post-job-btn"
+                >
+                    Post a Job →
+                </a>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 WHY SKILLCONNECT
+            ============================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            WHY SKILLCONNECT
+                        </span>
+
+                        <h2>
+                            Service You Can Trust
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefits-grid">
+
+
+                    <div class="benefit-card">
+
+                        <div class="benefit-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Verified Professionals
+                            </h3>
+
+                            <p>
+                                Find professionals with verified
+                                profiles and skills.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit-card">
+
+                        <div class="benefit-icon">
+                            ★
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Real Customer Reviews
+                            </h3>
+
+                            <p>
+                                Check ratings and reviews before
+                                booking a professional.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit-card">
+
+                        <div class="benefit-icon">
+                            🔒
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Secure Booking
+                            </h3>
+
+                            <p>
+                                Your booking and payment information
+                                stays protected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit-card">
+
+                        <div class="benefit-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Nearby Professionals
+                            </h3>
+
+                            <p>
+                                Discover skilled professionals
+                                available in your area.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         TOAST MESSAGE
+    ====================================================== -->
+
+    <div
+        id="dashboardToast"
+        class="dashboard-toast"
+    ></div>
+
+
+
+    <!-- =====================================================
+         CUSTOMER JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="coustomer-dashboard.js"
+    ></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Manage your SkillConnect customer profile."
+    >
+
+    <title>My Profile | SkillConnect</title>
+
+
+    <!-- Profile CSS -->
+    <link rel="stylesheet" href="coustomer-profile.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="container header-container">
+
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    S
+                </span>
+
+                <span class="logo-text">
+                    Skill<span>Connect</span>
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="main-nav">
+
+                <a href="coustomer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+                <a href="post-job.html">
+                    Post a Job
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+
+            <div class="header-actions">
+
+
+                <a
+                    href="notifications.html"
+                    class="notification-btn"
+                    title="Notifications"
+                >
+
+                    🔔
+
+                    <span class="notification-count">
+                        2
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="coustomer-profile.html"
+                    class="profile-btn active"
+                >
+
+                    <span
+                        class="profile-avatar"
+                        id="headerAvatar"
+                    >
+                        C
+                    </span>
+
+                    <span
+                        class="profile-name"
+                        id="headerName"
+                    >
+                        Customer
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="profile-page">
+
+        <div class="container">
+
+
+            <!-- Breadcrumb -->
+
+            <div class="breadcrumb">
+
+                <a href="coustomer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <span>›</span>
+
+                <span>
+                    My Profile
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        ACCOUNT
+                    </span>
+
+                    <h1>
+                        My Profile
+                    </h1>
+
+                    <p>
+                        Manage your personal information and account details.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROFILE LAYOUT
+            ================================================== -->
+
+            <div class="profile-layout">
+
+
+                <!-- =============================================
+                     LEFT PROFILE CARD
+                ============================================== -->
+
+                <aside class="profile-sidebar">
+
+
+                    <!-- Profile Card -->
+
+                    <section class="profile-card">
+
+
+                        <div class="profile-avatar-large">
+
+                            <span id="profileInitials">
+                                C
+                            </span>
+
+                        </div>
+
+
+                        <h2 id="profileDisplayName">
+                            Customer
+                        </h2>
+
+
+                        <p
+                            class="profile-email"
+                            id="profileDisplayEmail"
+                        >
+                            customer@example.com
+                        </p>
+
+
+                        <span class="account-badge">
+                            Customer
+                        </span>
+
+
+                        <div class="profile-divider"></div>
+
+
+                        <div class="profile-quick-info">
+
+
+                            <div class="quick-info-item">
+
+                                <span>
+                                    📍
+                                </span>
+
+                                <div>
+
+                                    <small>
+                                        Location
+                                    </small>
+
+                                    <strong id="profileLocation">
+                                        Kanpur, India
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="quick-info-item">
+
+                                <span>
+                                    📅
+                                </span>
+
+                                <div>
+
+                                    <small>
+                                        Member Since
+                                    </small>
+
+                                    <strong id="memberSince">
+                                        2026
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="quick-info-item">
+
+                                <span>
+                                    📋
+                                </span>
+
+                                <div>
+
+                                    <small>
+                                        Total Bookings
+                                    </small>
+
+                                    <strong id="profileBookingCount">
+                                        0
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- Profile Navigation -->
+
+                    <nav class="profile-nav">
+
+
+                        <button
+                            type="button"
+                            class="profile-nav-item active"
+                            data-tab="personal"
+                        >
+
+                            <span>
+                                👤
+                            </span>
+
+                            Personal Information
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="profile-nav-item"
+                            data-tab="address"
+                        >
+
+                            <span>
+                                📍
+                            </span>
+
+                            Address
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="profile-nav-item"
+                            data-tab="security"
+                        >
+
+                            <span>
+                                🔒
+                            </span>
+
+                            Security
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="profile-nav-item"
+                            data-tab="preferences"
+                        >
+
+                            <span>
+                                ⚙️
+                            </span>
+
+                            Preferences
+
+                        </button>
+
+
+                    </nav>
+
+
+                </aside>
+
+
+
+                <!-- =============================================
+                     RIGHT CONTENT
+                ============================================== -->
+
+                <div class="profile-content">
+
+
+                    <!-- =========================================
+                         PERSONAL INFORMATION
+                    ========================================== -->
+
+                    <section
+                        class="profile-section active"
+                        id="personalSection"
+                        data-section="personal"
+                    >
+
+
+                        <div class="section-card">
+
+
+                            <div class="section-card-header">
+
+                                <div>
+
+                                    <span class="card-label">
+                                        PERSONAL INFORMATION
+                                    </span>
+
+                                    <h2>
+                                        Basic Details
+                                    </h2>
+
+                                    <p>
+                                        Update your personal information.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Profile Photo -->
+
+                            <div class="profile-photo-section">
+
+
+                                <div class="profile-photo">
+
+                                    <span id="photoInitials">
+                                        C
+                                    </span>
+
+                                </div>
+
+
+                                <div class="photo-content">
+
+                                    <h3>
+                                        Profile Photo
+                                    </h3>
+
+                                    <p>
+                                        Add a profile photo to help
+                                        professionals recognize you.
+                                    </p>
+
+
+                                    <label
+                                        for="profilePhoto"
+                                        class="upload-photo-btn"
+                                    >
+                                        Upload Photo
+                                    </label>
+
+
+                                    <input
+                                        type="file"
+                                        id="profilePhoto"
+                                        accept="image/*"
+                                        hidden
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Personal Form -->
+
+                            <form
+                                id="profileForm"
+                                class="profile-form"
+                            >
+
+
+                                <div class="form-row">
+
+
+                                    <div class="form-group">
+
+                                        <label for="profileName">
+
+                                            Full Name
+
+                                            <span>*</span>
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="profileName"
+                                            name="profileName"
+                                            placeholder="Enter your full name"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="profilePhone">
+
+                                            Phone Number
+
+                                            <span>*</span>
+
+                                        </label>
+
+                                        <input
+                                            type="tel"
+                                            id="profilePhone"
+                                            name="profilePhone"
+                                            placeholder="Enter your phone number"
+                                            maxlength="10"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="form-group">
+
+                                    <label for="profileEmail">
+
+                                        Email Address
+
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="profileEmail"
+                                        name="profileEmail"
+                                        placeholder="Enter your email"
+                                        readonly
+                                    >
+
+                                    <small class="input-help">
+                                        Email address is linked to your
+                                        SkillConnect account.
+                                    </small>
+
+                                </div>
+
+
+
+                                <div class="form-row">
+
+
+                                    <div class="form-group">
+
+                                        <label for="profileGender">
+
+                                            Gender
+
+                                        </label>
+
+                                        <select
+                                            id="profileGender"
+                                            name="profileGender"
+                                        >
+
+                                            <option value="">
+                                                Select Gender
+                                            </option>
+
+                                            <option value="male">
+                                                Male
+                                            </option>
+
+                                            <option value="female">
+                                                Female
+                                            </option>
+
+                                            <option value="other">
+                                                Other
+                                            </option>
+
+                                            <option value="prefer-not-to-say">
+                                                Prefer not to say
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="profileDob">
+
+                                            Date of Birth
+
+                                        </label>
+
+                                        <input
+                                            type="date"
+                                            id="profileDob"
+                                            name="profileDob"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="form-actions">
+
+                                    <button
+                                        type="button"
+                                        class="outline-btn"
+                                        id="cancelProfileBtn"
+                                    >
+                                        Cancel
+                                    </button>
+
+
+                                    <button
+                                        type="submit"
+                                        class="primary-btn"
+                                        id="saveProfileBtn"
+                                    >
+                                        Save Changes
+                                    </button>
+
+                                </div>
+
+
+                            </form>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =========================================
+                         ADDRESS SECTION
+                    ========================================== -->
+
+                    <section
+                        class="profile-section"
+                        id="addressSection"
+                        data-section="address"
+                    >
+
+
+                        <div class="section-card">
+
+
+                            <div class="section-card-header">
+
+                                <div>
+
+                                    <span class="card-label">
+                                        ADDRESS
+                                    </span>
+
+                                    <h2>
+                                        Service Address
+                                    </h2>
+
+                                    <p>
+                                        This address can be used while
+                                        booking services.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <form
+                                id="addressForm"
+                                class="profile-form"
+                            >
+
+
+                                <div class="form-group">
+
+                                    <label for="profileAddress">
+
+                                        Complete Address
+
+                                        <span>*</span>
+
+                                    </label>
+
+                                    <textarea
+                                        id="profileAddress"
+                                        name="profileAddress"
+                                        rows="4"
+                                        placeholder="Enter your complete address"
+                                    ></textarea>
+
+                                </div>
+
+
+
+                                <div class="form-row">
+
+
+                                    <div class="form-group">
+
+                                        <label for="profileCity">
+
+                                            City
+
+                                            <span>*</span>
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="profileCity"
+                                            name="profileCity"
+                                            placeholder="e.g. Kanpur"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="profileState">
+
+                                            State
+
+                                            <span>*</span>
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="profileState"
+                                            name="profileState"
+                                            placeholder="e.g. Uttar Pradesh"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="form-row">
+
+
+                                    <div class="form-group">
+
+                                        <label for="profilePincode">
+
+                                            Pincode
+
+                                            <span>*</span>
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="profilePincode"
+                                            name="profilePincode"
+                                            placeholder="6-digit pincode"
+                                            maxlength="6"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="profileLandmark">
+
+                                            Landmark
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="profileLandmark"
+                                            name="profileLandmark"
+                                            placeholder="Nearby landmark"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="saved-address-box">
+
+                                    <div class="saved-address-icon">
+                                        📍
+                                    </div>
+
+                                    <div>
+
+                                        <h3>
+                                            Default Service Address
+                                        </h3>
+
+                                        <p id="savedAddressText">
+                                            No address saved yet.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="form-actions">
+
+                                    <button
+                                        type="submit"
+                                        class="primary-btn"
+                                        id="saveAddressBtn"
+                                    >
+                                        Save Address
+                                    </button>
+
+                                </div>
+
+
+                            </form>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =========================================
+                         SECURITY SECTION
+                    ========================================== -->
+
+                    <section
+                        class="profile-section"
+                        id="securitySection"
+                        data-section="security"
+                    >
+
+
+                        <div class="section-card">
+
+
+                            <div class="section-card-header">
+
+                                <div>
+
+                                    <span class="card-label">
+                                        SECURITY
+                                    </span>
+
+                                    <h2>
+                                        Account Security
+                                    </h2>
+
+                                    <p>
+                                        Manage your password and
+                                        account security.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="security-item">
+
+
+                                <div class="security-item-icon">
+                                    🔑
+                                </div>
+
+
+                                <div class="security-item-content">
+
+                                    <h3>
+                                        Password
+                                    </h3>
+
+                                    <p>
+                                        Keep your account secure by
+                                        using a strong password.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="outline-btn"
+                                    id="changePasswordBtn"
+                                >
+                                    Change Password
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="security-item">
+
+
+                                <div class="security-item-icon">
+                                    📧
+                                </div>
+
+
+                                <div class="security-item-content">
+
+                                    <h3>
+                                        Email Verification
+                                    </h3>
+
+                                    <p
+                                        id="emailVerificationStatus"
+                                    >
+                                        Checking email verification...
+                                    </p>
+
+                                </div>
+
+
+                                <span
+                                    class="verification-badge"
+                                    id="verificationBadge"
+                                >
+                                    Checking
+                                </span>
+
+                            </div>
+
+
+
+                            <div class="security-item danger-item">
+
+
+                                <div class="security-item-icon">
+                                    ⚠️
+                                </div>
+
+
+                                <div class="security-item-content">
+
+                                    <h3>
+                                        Logout
+                                    </h3>
+
+                                    <p>
+                                        Sign out from your
+                                        SkillConnect account.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="danger-outline-btn"
+                                    id="profileLogoutBtn"
+                                >
+                                    Logout
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =========================================
+                         PREFERENCES SECTION
+                    ========================================== -->
+
+                    <section
+                        class="profile-section"
+                        id="preferencesSection"
+                        data-section="preferences"
+                    >
+
+
+                        <div class="section-card">
+
+
+                            <div class="section-card-header">
+
+                                <div>
+
+                                    <span class="card-label">
+                                        PREFERENCES
+                                    </span>
+
+                                    <h2>
+                                        Notification Preferences
+                                    </h2>
+
+                                    <p>
+                                        Choose how SkillConnect
+                                        communicates with you.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="preference-item">
+
+
+                                <div>
+
+                                    <h3>
+                                        Booking Updates
+                                    </h3>
+
+                                    <p>
+                                        Receive updates about your
+                                        booking status.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="toggle-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="bookingNotifications"
+                                        checked
+                                    >
+
+                                    <span class="toggle-slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="preference-item">
+
+
+                                <div>
+
+                                    <h3>
+                                        Professional Messages
+                                    </h3>
+
+                                    <p>
+                                        Get notified when a professional
+                                        sends you a message.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="toggle-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="messageNotifications"
+                                        checked
+                                    >
+
+                                    <span class="toggle-slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="preference-item">
+
+
+                                <div>
+
+                                    <h3>
+                                        Offers & Promotions
+                                    </h3>
+
+                                    <p>
+                                        Receive useful offers and
+                                        promotional updates.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="toggle-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="offerNotifications"
+                                    >
+
+                                    <span class="toggle-slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="preference-item">
+
+
+                                <div>
+
+                                    <h3>
+                                        Email Notifications
+                                    </h3>
+
+                                    <p>
+                                        Receive important account
+                                        information by email.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="toggle-switch">
+
+                                    <input
+                                        type="checkbox"
+                                        id="emailNotifications"
+                                        checked
+                                    >
+
+                                    <span class="toggle-slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="form-actions">
+
+                                <button
+                                    type="button"
+                                    class="primary-btn"
+                                    id="savePreferencesBtn"
+                                >
+                                    Save Preferences
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         TOAST MESSAGE
+    ====================================================== -->
+
+    <div
+        id="profileToast"
+        class="profile-toast"
+    ></div>
+
+
+
+    <!-- =====================================================
+         PROFILE JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="coustomer-profile.js"
+    ></script>
+
+
+</body>
+
+</html>

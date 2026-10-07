@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Manage your SkillConnect professional profile">
+
+    <title>Worker Profile | SkillConnect</title>
+
+    <!-- ONLY THIS CSS FILE -->
+    <link rel="stylesheet" href="worker-profile.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <a href="index.html">
+                <div class="brand-logo">SC</div>
+
+                <div class="brand-name">
+                    Skill<span>Connect</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Worker mini profile -->
+        <div class="sidebar-profile">
+
+            <div class="sidebar-avatar" id="sidebarAvatar">
+                AS
+            </div>
+
+            <div>
+                <h4 id="sidebarName">Aman Sharma</h4>
+                <p>Professional</p>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+
+            <div class="nav-title">MAIN MENU</div>
+
+            <a href="worker-dashboard.html" class="nav-link">
+                <span>⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="worker-job.html" class="nav-link">
+                <span>▣</span>
+                <span>Job Requests</span>
+                <b id="jobBadge">0</b>
+            </a>
+
+            <a href="my-bookings.html" class="nav-link">
+                <span>▤</span>
+                <span>My Jobs</span>
+            </a>
+
+            <a href="notifications.html" class="nav-link">
+                <span>♢</span>
+                <span>Notifications</span>
+            </a>
+
+            <div class="nav-title professional-title">
+                PROFESSIONAL
+            </div>
+
+            <a href="worker-profile.html"
+               class="nav-link active">
+                <span>◉</span>
+                <span>My Profile</span>
+            </a>
+
+            <a href="payments.html" class="nav-link">
+                <span>₹</span>
+                <span>Earnings</span>
+            </a>
+
+            <a href="reviews.html" class="nav-link">
+                <span>★</span>
+                <span>Ratings & Reviews</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button id="logoutBtn"
+                    class="logout-btn">
+                <span>⇥</span>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+         ===================================================== -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="menuBtn"
+                        class="menu-btn">
+                    ☰
+                </button>
+
+                <div>
+                    <h2>Professional Profile</h2>
+                    <p>Manage your skills and professional information</p>
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <button class="notification-btn"
+                        onclick="window.location.href='notifications.html'">
+                    ♢
+                    <span></span>
+                </button>
+
+                <div class="header-user">
+
+                    <div class="header-avatar"
+                         id="headerAvatar">
+                        AS
+                    </div>
+
+                    <div>
+                        <strong id="headerName">
+                            Aman Sharma
+                        </strong>
+
+                        <small>Professional</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <section class="content">
+
+            <!-- =================================================
+                 PROFILE HERO
+                 ================================================= -->
+
+            <div class="profile-hero">
+
+                <div class="profile-identity">
+
+                    <div class="big-avatar-box">
+
+                        <div class="big-avatar"
+                             id="bigAvatar">
+                            AS
+                        </div>
+
+                        <span class="online-dot"
+                              id="onlineDot">
+                        </span>
+
+                    </div>
+
+                    <div class="profile-title">
+
+                        <h1 id="heroName">
+                            Aman Sharma
+                        </h1>
+
+                        <p id="heroTitle">
+                            Home Cleaning Specialist
+                        </p>
+
+                        <div class="rating-line">
+
+                            <span class="stars"
+                                  id="heroStars">
+                                ★★★★★
+                            </span>
+
+                            <strong id="heroRating">
+                                4.8
+                            </strong>
+
+                            <span>
+                                (<span id="heroReviews">24</span> reviews)
+                            </span>
+
+                        </div>
+
+                        <div class="verification-badge"
+                             id="verificationBadge">
+                            ✓ Verified Professional
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button id="editProfileBtn"
+                        class="primary-btn">
+                    Edit Profile
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 STATS
+                 ================================================= -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <span>Experience</span>
+                    <strong id="statExperience">
+                        5 Years
+                    </strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Completed Jobs</span>
+                    <strong id="statJobs">
+                        0
+                    </strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Starting Price</span>
+                    <strong id="statPrice">
+                        ₹400
+                    </strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Response Rate</span>
+                    <strong id="statResponse">
+                        95%
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TWO COLUMN AREA
+                 ================================================= -->
+
+            <div class="profile-grid">
+
+                <!-- =================================================
+                     LEFT COLUMN
+                     ================================================= -->
+
+                <div class="left-column">
+
+                    <!-- BASIC INFORMATION -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Basic Information</h2>
+                                <p>Professional details</p>
+                            </div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <form id="profileForm">
+
+                                <div class="form-grid">
+
+                                    <div class="form-group">
+
+                                        <label for="workerName">
+                                            Full Name
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="workerName"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="workerEmail">
+                                            Email Address
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            id="workerEmail"
+                                            readonly>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="workerPhone">
+                                            Mobile Number
+                                        </label>
+
+                                        <input
+                                            type="tel"
+                                            id="workerPhone"
+                                            maxlength="10"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="workerGender">
+                                            Gender
+                                        </label>
+
+                                        <select id="workerGender">
+
+                                            <option value="">
+                                                Select Gender
+                                            </option>
+
+                                            <option value="male">
+                                                Male
+                                            </option>
+
+                                            <option value="female">
+                                                Female
+                                            </option>
+
+                                            <option value="other">
+                                                Other
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="workerExperience">
+                                            Experience
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="workerExperience"
+                                            placeholder="Example: 5 years"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="workerPrice">
+                                            Starting Price
+                                        </label>
+
+                                        <input
+                                            type="number"
+                                            id="workerPrice"
+                                            min="0"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group full">
+
+                                        <label for="workerTitle">
+                                            Professional Title
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="workerTitle"
+                                            placeholder="Example: Home Cleaning Specialist"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group full">
+
+                                        <label for="workerAbout">
+                                            About Yourself
+                                        </label>
+
+                                        <textarea
+                                            id="workerAbout"
+                                            placeholder="Tell customers about yourself..."
+                                            required></textarea>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-buttons">
+
+                                    <button
+                                        type="button"
+                                        id="cancelBtn"
+                                        class="secondary-btn">
+                                        Cancel
+                                    </button>
+
+                                    <button
+                                        type="submit"
+                                        id="saveBtn"
+                                        class="primary-btn">
+                                        Save Profile
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SKILLS -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Skills & Service</h2>
+                                <p>Add your professional skills</p>
+                            </div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div id="skillsList"
+                                 class="skills-list">
+                            </div>
+
+                            <div class="add-skill">
+
+                                <input
+                                    type="text"
+                                    id="skillInput"
+                                    placeholder="Add a skill or Service">
+
+                                <button
+                                    type="button"
+                                    id="addSkillBtn"
+                                    class="primary-btn">
+                                    + Add
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Service Location</h2>
+                                <p>Where you provide service</p>
+                            </div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <form id="locationForm">
+
+                                <div class="form-grid">
+
+                                    <div class="form-group">
+
+                                        <label for="workerCity">
+                                            City
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="workerCity"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="workerState">
+                                            State
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="workerState"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="workerPincode">
+                                            Pincode
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="workerPincode"
+                                            maxlength="6"
+                                            required>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="serviceRadius">
+                                            Service Radius
+                                        </label>
+
+                                        <select id="serviceRadius">
+
+                                            <option value="5">
+                                                Within 5 KM
+                                            </option>
+
+                                            <option value="10">
+                                                Within 10 KM
+                                            </option>
+
+                                            <option value="20">
+                                                Within 20 KM
+                                            </option>
+
+                                            <option value="30">
+                                                Within 30 KM
+                                            </option>
+
+                                            <option value="50">
+                                                Within 50 KM
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-buttons">
+
+                                    <button
+                                        type="submit"
+                                        class="primary-btn">
+                                        Save Location
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PORTFOLIO -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Work Portfolio</h2>
+                                <p>Showcase your completed work</p>
+                            </div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div id="portfolioGrid"
+                                 class="portfolio-grid">
+                            </div>
+
+                            <label class="upload-box">
+
+                                <input
+                                    type="file"
+                                    id="portfolioInput"
+                                    accept="image/*"
+                                    multiple>
+
+                                <span class="upload-icon">
+                                    +
+                                </span>
+
+                                <strong>
+                                    Add Photos
+                                </strong>
+
+                                <small>
+                                    JPG / PNG
+                                </small>
+
+                            </label>
+
+                            <p class="help-text">
+                                Add clear photos of your completed work
+                                to build customer trust.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RIGHT COLUMN
+                     ================================================= -->
+
+                <div class="right-column">
+
+                    <!-- PROFILE INFORMATION -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+                            <h2>Profile Information</h2>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="info-row">
+                                <span>Professional</span>
+                                <strong id="sideName">
+                                    Aman Sharma
+                                </strong>
+                            </div>
+
+                            <div class="info-row">
+                                <span>Category</span>
+                                <strong id="sideCategory">
+                                    Home Cleaning
+                                </strong>
+                            </div>
+
+                            <div class="info-row">
+                                <span>Experience</span>
+                                <strong id="sideExperience">
+                                    5 Years
+                                </strong>
+                            </div>
+
+                            <div class="info-row">
+                                <span>Location</span>
+                                <strong id="sideLocation">
+                                    Kanpur, Uttar Pradesh
+                                </strong>
+                            </div>
+
+                            <div class="info-row">
+                                <span>Starting Price</span>
+                                <strong id="sidePrice">
+                                    ₹400
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AVAILABILITY -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+                            <h2>Availability</h2>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div id="availabilityBox"
+                                 class="availability-box">
+
+                                <div class="availability-top">
+
+                                    <div>
+
+                                        <h4 id="availabilityTitle">
+                                            Available for Jobs
+                                        </h4>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            id="availabilityToggle">
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+                                <p id="availabilityText">
+                                    Customers can currently send you
+                                    job requests.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RATING -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <h2>Customer Rating</h2>
+
+                            <a href="reviews.html">
+                                View Reviews
+                            </a>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="rating-box">
+
+                                <div id="sideRating"
+                                     class="rating-number">
+                                    4.8
+                                </div>
+
+                                <div id="sideStars"
+                                     class="side-stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    Based on
+                                    <strong id="sideReviews">
+                                        24
+                                    </strong>
+                                    reviews
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- VERIFICATION -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+                            <h2>Verification</h2>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div id="verificationBox"
+                                 class="verification-box">
+
+                                <h4 id="verificationTitle">
+                                    ✓ Profile Verified
+                                </h4>
+
+                                <p id="verificationText">
+                                    Your professional profile has been
+                                    verified.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACCOUNT -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+                            <h2>Account</h2>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="danger-box">
+
+                                <h4>Logout from this account</h4>
+
+                                <p>
+                                    You will need to login again to
+                                    access your professional dashboard.
+                                </p>
+
+                                <button
+                                    type="button"
+                                    id="profileLogoutBtn"
+                                    class="danger-btn">
+                                    Logout
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+     ========================================================= -->
+
+<div id="toast"
+     class="toast">
+</div>
+
+
+<!-- ONLY THIS JS FILE -->
+<script src="worker-profile.js"></script>
+
+</body>
+</html>

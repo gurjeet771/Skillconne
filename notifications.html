@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Notifications - SkillConnect">
+
+    <title>Notifications | SkillConnect</title>
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="notifications.css">
+
+    <!-- Responsive CSS -->
+
+    <link rel="stylesheet" href="responsive.css">
+
+
+    <!-- =====================================================
+         NOTIFICATION PAGE EXTRA CSS
+         ===================================================== -->
+
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- =====================================================
+         DASHBOARD LAYOUT
+         ===================================================== -->
+
+    <div class="dashboard-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="dashboard-sidebar"
+               id="dashboardSidebar">
+
+
+            <!-- Brand -->
+
+            <div class="sidebar-brand">
+
+                <a href="index.html">
+
+                    <div class="sidebar-logo">
+                        SC
+                    </div>
+
+                    <div class="sidebar-brand-name">
+                        Skill<span>Connect</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Customer Profile -->
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar"
+                     id="sidebarCustomerAvatar">
+
+                    RK
+
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <h4 id="sidebarCustomerName">
+                        Rahul Kumar
+                    </h4>
+
+                    <p>
+                        Customer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="sidebar-nav-title">
+                    Main Menu
+                </p>
+
+
+                <ul>
+
+
+                    <!-- Dashboard -->
+
+                    <li>
+
+                        <a href="coustomer-dashboard.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ⌂
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Dashboard
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Services -->
+
+                    <li>
+
+                        <a href="services.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▦
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Services
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Bookings -->
+
+                    <li>
+
+                        <a href="my-bookings.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ▣
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Bookings
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="bookingCountBadge">
+
+                                0
+
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Post Job -->
+
+                    <li>
+
+                        <a href="post-job.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ＋
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Post a Job
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Notifications -->
+
+                    <li>
+
+                        <a href="notifications.html"
+                           class="sidebar-nav-link active">
+
+                            <span class="sidebar-nav-icon">
+                                ♢
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Notifications
+                            </span>
+
+                            <span class="sidebar-nav-badge"
+                                  id="notificationCountBadge">
+
+                                3
+
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <p class="sidebar-nav-title"
+                   style="margin-top: 25px;">
+
+                    Account
+
+                </p>
+
+
+                <ul>
+
+
+                    <!-- Profile -->
+
+                    <li>
+
+                        <a href="coustomer-profile.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ◉
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                My Profile
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Payments -->
+
+                    <li>
+
+                        <a href="payments.html"
+                           class="sidebar-nav-link">
+
+                            <span class="sidebar-nav-icon">
+                                ₹
+                            </span>
+
+                            <span class="sidebar-nav-text">
+                                Payments
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-logout"
+                        id="logoutBtn">
+
+                    <span>
+                        ⇥
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================================
+                 HEADER
+                 ================================================= -->
+
+            <header class="dashboard-header">
+
+
+                <div class="dashboard-header-left">
+
+
+                    <!-- Mobile Menu -->
+
+                    <button class="mobile-menu-btn"
+                            id="mobileMenuBtn">
+
+                        ☰
+
+                    </button>
+
+
+                    <div class="dashboard-header-title">
+
+                        <h2>
+                            Notifications
+                        </h2>
+
+                        <p>
+                            Stay updated with your SkillConnect activity
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Header Right -->
+
+                <div class="dashboard-header-right">
+
+
+                    <!-- Notification Button -->
+
+                    <button class="header-icon-btn">
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- User -->
+
+                    <div class="header-user">
+
+
+                        <div class="header-avatar"
+                             id="headerAvatar">
+
+                            RK
+
+                        </div>
+
+
+                        <div class="header-user-info">
+
+                            <strong id="headerName">
+                                Rahul Kumar
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+                 ================================================= -->
+
+            <div class="dashboard-content">
+
+
+                <div class="notification-page">
+
+
+                    <!-- =================================================
+                         PAGE HEADER
+                         ================================================= -->
+
+                    <div class="notification-page-header">
+
+
+                        <div>
+
+                            <h1>
+                                Notifications
+                            </h1>
+
+                            <p>
+                                Important updates about your bookings,
+                                jobs, payments and account.
+                            </p>
+
+                        </div>
+
+
+                        <div class="notification-header-actions">
+
+                            <button
+                                type="button"
+                                class="dashboard-btn dashboard-btn-secondary"
+                                id="markAllReadBtn">
+
+                                ✓ Mark All as Read
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="dashboard-btn dashboard-btn-danger"
+                                id="clearAllNotificationsBtn">
+
+                                Clear All
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         FILTERS
+                         ================================================= -->
+
+                    <div class="notification-filters">
+
+
+                        <button
+                            type="button"
+                            class="notification-filter active"
+                            data-filter="all">
+
+                            All
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="notification-filter"
+                            data-filter="booking">
+
+                            Bookings
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="notification-filter"
+                            data-filter="job">
+
+                            Jobs
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="notification-filter"
+                            data-filter="payment">
+
+                            Payments
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="notification-filter"
+                            data-filter="system">
+
+                            System
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="notification-filter"
+                            data-filter="unread">
+
+                            Unread
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         NOTIFICATION CARD
+                         ================================================= -->
+
+                    <div class="notifications-card">
+
+
+                        <!-- Summary -->
+
+                        <div class="notification-summary">
+
+
+                            <div class="notification-summary-text">
+
+                                You have
+
+                                <strong id="unreadNotificationCount">
+                                    3
+                                </strong>
+
+                                unread notifications
+
+                            </div>
+
+
+                            <div class="notification-summary-text">
+
+                                Latest updates
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Loading -->
+
+                        <div class="notification-loading"
+                             id="notificationLoading"
+                             style="display: none;">
+
+                            <div class="dashboard-spinner"></div>
+
+                            Loading notifications...
+
+                        </div>
+
+
+                        <!-- =================================================
+                             NOTIFICATION LIST
+                             ================================================= -->
+
+                        <div id="notificationList">
+
+
+                            <!-- Notification 1 -->
+
+                            <div class="notification-item unread"
+                                 data-type="booking"
+                                 data-id="notification-001">
+
+
+                                <div class="notification-item-icon booking">
+
+                                    📅
+
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h3>
+                                        Booking Accepted
+                                    </h3>
+
+                                    <p>
+                                        Your Bathroom Cleaning booking
+                                        has been accepted by Amit Sharma.
+                                        Your service is scheduled for
+                                        25 September at 11:00 AM.
+                                    </p>
+
+                                    <span class="notification-time">
+                                        10 minutes ago
+                                    </span>
+
+                                </div>
+
+
+                                <div class="notification-unread-dot"></div>
+
+
+                                <div class="notification-actions">
+
+                                    <button
+                                        type="button"
+                                        class="notification-action-btn"
+                                        title="View Booking"
+                                        data-action="view-booking"
+                                        data-booking-id="sample-001">
+
+                                        ↗
+
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="notification-action-btn"
+                                        title="Mark as read"
+                                        data-action="read">
+
+                                        ✓
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Notification 2 -->
+
+                            <div class="notification-item unread"
+                                 data-type="job"
+                                 data-id="notification-002">
+
+
+                                <div class="notification-item-icon success">
+
+                                    ✓
+
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h3>
+                                        New Worker Offer
+                                    </h3>
+
+                                    <p>
+                                        Rajesh Kumar has sent you an offer
+                                        of ₹400 for your Bathroom Cleaning
+                                        job.
+                                    </p>
+
+                                    <span class="notification-time">
+                                        35 minutes ago
+                                    </span>
+
+                                </div>
+
+
+                                <div class="notification-unread-dot"></div>
+
+
+                                <div class="notification-actions">
+
+                                    <button
+                                        type="button"
+                                        class="notification-action-btn"
+                                        title="View Job"
+                                        data-action="view-job"
+                                        data-job-id="JOB-2026-00125">
+
+                                        ↗
+
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="notification-action-btn"
+                                        title="Mark as read"
+                                        data-action="read">
+
+                                        ✓
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Notification 3 -->
+
+                            <div class="notification-item unread"
+                                 data-type="payment"
+                                 data-id="notification-003">
+
+
+                                <div class="notification-item-icon payment">
+
+                                    ₹
+
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h3>
+                                        Payment Reminder
+                                    </h3>
+
+                                    <p>
+                                        Your payment of ₹400 for Bathroom
+                                        Cleaning is pending after service
+                                        completion.
+                                    </p>
+
+                                    <span class="notification-time">
+                                        1 hour ago
+                                    </span>
+
+                                </div>
+
+
+                                <div class="notification-unread-dot"></div>
+
+
+                                <div class="notification-actions">
+
+                                    <button
+                                        type="button"
+                                        class="notification-action-btn"
+                                        title="Make Payment"
+                                        data-action="payment">
+
+                                        ₹
+
+                                    </button>
+
+
+                                    <button
+                                        type="button"
+                                        class="notification-action-btn"
+                                        title="Mark as read"
+                                        data-action="read">
+
+                                        ✓
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Notification 4 -->
+
+                            <div class="notification-item"
+                                 data-type="booking"
+                                 data-id="notification-004">
+
+
+                                <div class="notification-item-icon success">
+
+                                    ✓
+
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h3>
+                                        Service Completed
+                                    </h3>
+
+                                    <p>
+                                        Your AC Service booking has been
+                                        successfully completed. You can
+                                        now rate and review the professional.
+                                    </p>
+
+                                    <span class="notification-time">
+                                        Yesterday
+                                    </span>
+
+                                </div>
+
+
+                                <div class="notification-actions">
+
+                                    <button
+                                        type="button"
+                                        class="notification-action-btn"
+                                        title="Review Service"
+                                        data-action="review"
+                                        data-booking-id="sample-002">
+
+                                        ★
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Notification 5 -->
+
+                            <div class="notification-item"
+                                 data-type="system"
+                                 data-id="notification-005">
+
+
+                                <div class="notification-item-icon system">
+
+                                    ⚙
+
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h3>
+                                        Welcome to SkillConnect
+                                    </h3>
+
+                                    <p>
+                                        Your account is ready. Find trusted
+                                        professionals or post a job to
+                                        receive offers from nearby workers.
+                                    </p>
+
+                                    <span class="notification-time">
+                                        2 days ago
+                                    </span>
+
+                                </div>
+
+
+                                <div class="notification-actions">
+
+                                    <button
+                                        type="button"
+                                        class="notification-action-btn"
+                                        title="Mark as read"
+                                        data-action="read">
+
+                                        ✓
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- =================================================
+                             EMPTY STATE
+                             ================================================= -->
+
+                        <div class="notifications-empty"
+                             id="notificationsEmpty"
+                             style="display: none;">
+
+
+                            <div class="notifications-empty-icon">
+                                ♢
+                            </div>
+
+
+                            <h3>
+                                No notifications
+                            </h3>
+
+
+                            <p>
+                                You're all caught up. New updates about
+                                your bookings, jobs and account will appear
+                                here.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div class="dashboard-toast"
+         id="dashboardToast">
+    </div>
+
+
+    <!-- =====================================================
+         NOTIFICATIONS JAVASCRIPT
+         ===================================================== -->
+
+    <script type="module"
+            src="notifications.js"></script>
+
+
+</body>
+
+</html>
